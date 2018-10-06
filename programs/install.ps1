@@ -3,5 +3,5 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object
 $config = Get-Content config.json | ConvertFrom-Json
 
 foreach($program in $config.programs) {
-	choco install $program
+	choco install $program -y
 }
