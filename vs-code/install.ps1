@@ -13,5 +13,5 @@ Copy-Item .\data\keybindings.json -Destination $env:APPDATA\Code\User
 
 # snippets
 Get-ChildItem .\data\snippets | Select-Object Name | ForEach-Object {
-	Copy-Item .\data\snippets\$_.Name -Destination $env:APPDATA\Code\User\snippets
+	Copy-Item .\data\snippets\$($_.Name) -Destination $env:APPDATA\Code\User\snippets
 }
