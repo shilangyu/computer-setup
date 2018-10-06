@@ -5,6 +5,9 @@
 		"golang",
 		"googlechrome",
 		"nodejs.install",
-		"python"
+		"python",
+		"anydesk",
+		"vlc",
+		"gimp"
 	]
 }
