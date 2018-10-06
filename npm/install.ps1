@@ -1,5 +1,6 @@
+$config = Get-Content config.json | ConvertFrom-Json
+
 # global packages
-$globalPackages = 'nodemon', 'create-react-app', 'http-server'
-foreach($pckg in $globalPackages) {
+foreach($pckg in $config.global) {
 	npm i -g $pckg 
 }

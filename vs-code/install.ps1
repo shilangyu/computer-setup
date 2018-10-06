@@ -1,6 +1,7 @@
+$config = Get-Content config.json | ConvertFrom-Json
+
 # extentions
-$extensions = 'acidic9.p5js-snippets', 'alefragnani.project-manager', 'christian-kohler.path-intellisense', 'gerane.Theme-Gloom', 'hdg.live-html-previewer', 'HookyQR.beautify', 'joelday.docthis', 'ms-python.python', 'ms-vscode.cpptools', 'ms-vscode.Go', 'ms-vscode.PowerShell', 'ms-vsliveshare.vsliveshare', 'PKief.material-icon-theme', 'shd101wyy.markdown-preview-enhanced', 'zhuangtongfa.Material-theme'
-foreach ($name in $extensions) {
+foreach ($name in $config.extensions) {
 	code --install-extension $name
 }
 

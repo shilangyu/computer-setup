@@ -1,0 +1,7 @@
+{
+	"global": [
+		"nodemon", 
+		"create-react-app", 
+		"http-server"
+	]
+}
