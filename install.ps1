@@ -7,6 +7,6 @@ Get-ChildItem | ForEach-Object {
 	} else {
 		Set-Location .\$($_.Name)
 		& .\install.ps1
+		Set-Location ..
 	}
-	Set-Location ..
 }
