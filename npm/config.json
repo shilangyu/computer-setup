@@ -3,6 +3,7 @@
 		"nodemon", 
 		"create-react-app", 
 		"http-server",
-		"uglify-es"
+		"uglify-es",
+		"typescript"
 	]
 }
