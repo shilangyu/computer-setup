@@ -45,7 +45,7 @@ subfolder/
 
 ### golang
 - `config.json`: 
-```json
+```
 { 
 	"packages": string[](packages to be `go get`)
 }
@@ -54,7 +54,7 @@ subfolder/
 
 ### npm
 - `config.json`: 
-```json
+```
 { 
 	"global": string[](packages to be installed globally)
 }
@@ -63,7 +63,7 @@ subfolder/
 
 ### programs
 - `config.json`: 
-```json
+```
 { 
 	"programs": string[](programs to be installed by chocolatey)
 }
@@ -72,7 +72,7 @@ subfolder/
 
 ### python
 - `config.json`: 
-```json
+```
 { 
 	"global": string[](packages to be installed globally)
 }
@@ -81,7 +81,7 @@ subfolder/
 
 ### vs-code
 - `config.json`: 
-```json
+```
 { 
 	"extensions": string[](extensions to be installed)
 }
