@@ -1,0 +1,5 @@
+{
+	"packages": [
+		"github.com/zalando/skipper/..."
+	]
+}
