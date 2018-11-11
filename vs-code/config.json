@@ -3,6 +3,8 @@
 		"acidic9.p5js-snippets",
 		"alefragnani.project-manager",
 		"christian-kohler.path-intellisense",
+		"CoenraadS.bracket-pair-colorizer",
+		"esbenp.prettier-vscode",
 		"joelday.docthis",
 		"ms-python.python",
 		"ms-vscode.cpptools",
@@ -11,8 +13,6 @@
 		"ms-vsliveshare.vsliveshare",
 		"PKief.material-icon-theme",
 		"shd101wyy.markdown-preview-enhanced",
-		"zhuangtongfa.Material-theme",
-		"esbenp.prettier-vscode",
-		"CoenraadS.bracket-pair-colorizer"
+		"zhuangtongfa.Material-theme"
 	]
 }

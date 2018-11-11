@@ -1,6 +1,17 @@
 // Place your key bindings in this file to overwrite the defaults
 [
-	{ "key": "ctrl+shift+s", "command": "workbench.action.files.saveAll" },
-	{ "key": "ctrl+t",           "command": "editor.action.formatDocument",
-		"when": "editorTextFocus && !editorReadonly" },
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.files.saveAll"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "editor.action.formatDocument",
+		"when": "editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+shift+6",
+		"command": "editor.action.transformToUppercase",
+		"when": "editorTextFocus"
+	}
 ]
