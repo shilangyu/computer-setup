@@ -4,6 +4,7 @@
 		"create-react-app", 
 		"http-server",
 		"uglify-es",
-		"typescript"
+		"typescript",
+		"pnpm"
 	]
 }
