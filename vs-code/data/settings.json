@@ -5,7 +5,7 @@
 	"editor.fontLigatures": true,
 	"path-intellisense.extensionOnImport": true,
 	"explorer.confirmDelete": false,
-	"python.pythonPath": "C:\\Users\\Marcin\\AppData\\Local\\Programs\\Python\\Python36-32\\python.exe",
+	"python.pythonPath": "C:\\Python37\\python.exe",
 	"git.confirmSync": false,
 	"workbench.iconTheme": "material-icon-theme",
 	"window.zoomLevel": 0,
@@ -39,5 +39,7 @@
 	"git.autofetch": true,
 	"editor.cursorSmoothCaretAnimation": true,
 	"editor.smoothScrolling": true,
-	"explorer.confirmDragAndDrop": false
+	"explorer.confirmDragAndDrop": false,
+	"workbench.settings.useSplitJSON": true,
+	"editor.formatOnSave": true
 }
