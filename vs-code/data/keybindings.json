@@ -5,13 +5,12 @@
 		"command": "workbench.action.files.saveAll"
 	},
 	{
-		"key": "ctrl+t",
-		"command": "editor.action.formatDocument",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
 		"key": "ctrl+shift+6",
 		"command": "editor.action.transformToUppercase",
 		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.files.newUntitledFile"
 	}
 ]
