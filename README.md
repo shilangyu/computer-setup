@@ -86,7 +86,10 @@ subfolder/
 
 ```
 {
-	"programs": string[](programs to be installed by chocolatey)
+	"programs": {
+		"name": (programs to be installed by chocolatey),
+		"params": (params to be passed to the package)
+	}[]
 }
 ```
 

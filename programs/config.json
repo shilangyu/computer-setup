@@ -1,14 +1,14 @@
 {
 	"programs": [
-		"git",
-		"vscode",
-		"golang",
-		"googlechrome",
-		"nodejs.install",
-		"python",
-		"anydesk",
-		"vlc",
-		"gimp",
-		"cmder"
+		{ "name": "git", "params": [] },
+		{ "name": "vscode", "params": [] },
+		{ "name": "golang", "params": [] },
+		{ "name": "googlechrome", "params": [] },
+		{ "name": "nodejs.install", "params": [] },
+		{ "name": "python", "params": [] },
+		{ "name": "anydesk", "params": [] },
+		{ "name": "vlc", "params": [] },
+		{ "name": "gimp", "params": [] },
+		{ "name": "cmder", "params": [] }
 	]
 }
