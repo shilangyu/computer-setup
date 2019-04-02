@@ -1,6 +1,6 @@
 {
 	"programs": [
-		{ "name": "git", "params": [] },
+		{ "name": "git", "params": ["/NoShellIntegration"] },
 		{ "name": "vscode", "params": [] },
 		{ "name": "golang", "params": [] },
 		{ "name": "googlechrome", "params": [] },
