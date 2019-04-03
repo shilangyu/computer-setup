@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <key name="Software">
 	<key name="ConEmu">
-		<key name=".Vanilla" modified="2019-03-26 09:47:50" build="180626">
+		<key name=".Vanilla" modified="2019-04-03 20:55:24" build="180626">
 			<value name="Language" type="string" data="en"/>
 			<value name="StartType" type="hex" data="02"/>
 			<value name="CmdLine" type="string" data=""/>
@@ -170,7 +170,7 @@
 			<value name="ComSpec.Path" type="string" data=""/>
 			<value name="EnvironmentSet" type="multi">
 				<line data="set PATH=%ConEmuBaseDir%\Scripts;%PATH%"/>
-				<line data="set CMDER_START=C:/Coding"/>
+				<line data=" "/>
 			</value>
 			<value name="CTS.Intelligent" type="hex" data="01"/>
 			<value name="CTS.IntelligentExceptions" type="string" data="far|vim.exe"/>
@@ -387,7 +387,7 @@
 			<value name="Update.DownloadPath" type="string" data="%TEMP%\ConEmu"/>
 			<value name="Update.LeavePackages" type="hex" data="00"/>
 			<value name="Update.PostUpdateCmd" type="string" data="echo Last successful update&gt;ConEmuUpdate.info &amp;&amp; date /t&gt;&gt;ConEmuUpdate.info &amp;&amp; time /t&gt;&gt;ConEmuUpdate.info"/>
-			<key name="HotKeys" modified="2019-03-26 09:47:50" build="180626">
+			<key name="HotKeys" modified="2019-04-03 20:55:25" build="180626">
 				<value name="KeyMacroVersion" type="hex" data="02"/>
 				<value name="Multi.Modifier" type="dword" data="00000011"/>
 				<value name="Multi.ArrowsModifier" type="dword" data="0000005b"/>
@@ -583,9 +583,9 @@
 				<value name="DndRKey" type="hex" data="A2"/>
 				<value name="WndDragKey" type="dword" data="00121101"/>
 			</key>
-			<key name="Tasks" modified="2019-03-26 09:47:50" build="180626">
+			<key name="Tasks" modified="2019-04-03 20:55:25" build="180626">
 				<value name="Count" type="long" data="9"/>
-				<key name="Task1" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task1" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{cmd::Cmder as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -594,7 +594,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*cmd /k ""%ConEmuDir%\..\init.bat" "'/>
 				</key>
-				<key name="Task2" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task2" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{cmd::Cmder}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -603,7 +603,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /k ""%ConEmuDir%\..\init.bat" "'/>
 				</key>
-				<key name="Task3" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task3" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{PowerShell::PowerShell as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -612,16 +612,16 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 				</key>
-				<key name="Task4" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task4" modified="2019-04-03 20:59:01" build="180626">
 					<value name="Name" type="string" data="{PowerShell::PowerShell}"/>
 					<value name="Flags" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
+					<value name="Cmd1" type="string" data='-new_console:d:C:\Coding PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;;function expl{explorer .};"'/>
 				</key>
-				<key name="Task5" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task5" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{bash::mintty as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -630,7 +630,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*"%ConEmuDir%\..\git-for-windows\usr\bin\mintty.exe" /bin/bash -l'/>
 				</key>
-				<key name="Task6" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task6" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{bash::mintty}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -639,7 +639,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='"%ConEmuDir%\..\git-for-windows\usr\bin\mintty.exe" /bin/bash -l'/>
 				</key>
-				<key name="Task7" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task7" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{bash::bash as Admin}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -648,7 +648,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"'/>
 				</key>
-				<key name="Task8" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task8" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{bash::bash}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -657,7 +657,7 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='cmd /c ""%ConEmuDir%\..\git-for-windows\bin\bash" --login -i"'/>
 				</key>
-				<key name="Task9" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Task9" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{WSL::bash}"/>
 					<value name="Flags" type="dword" data="00000000"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
@@ -667,12 +667,12 @@
 					<value name="Cmd1" type="string" data='set "PATH=%ConEmuBaseDirShort%\wsl;%PATH%" &amp; %ConEmuBaseDirShort%\conemu-cyg-64.exe --wsl -cur_console:pm:/mnt'/>
 				</key>
 			</key>
-			<key name="Apps" modified="2019-03-26 09:47:50" build="180626">
+			<key name="Apps" modified="2019-04-03 20:55:25" build="180626">
 				<value name="Count" type="long" data="0"/>
 			</key>
-			<key name="Colors" modified="2019-03-26 09:47:50" build="180626">
+			<key name="Colors" modified="2019-04-03 20:55:25" build="180626">
 				<value name="Count" type="long" data="1"/>
-				<key name="Palette1" modified="2019-03-26 09:47:50" build="180626">
+				<key name="Palette1" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="Monokai"/>
 					<value name="TextColorIdx" type="hex" data="10"/>
 					<value name="BackColorIdx" type="hex" data="10"/>
