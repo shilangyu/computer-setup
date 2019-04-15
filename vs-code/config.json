@@ -14,6 +14,7 @@
 		"PKief.material-icon-theme",
 		"shd101wyy.markdown-preview-enhanced",
 		"slevesque.vscode-autohotkey",
-		"zhuangtongfa.Material-theme"
+		"zhuangtongfa.Material-theme",
+		"dtsvet.vscode-wasm"
 	]
 }
