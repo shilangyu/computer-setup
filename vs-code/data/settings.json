@@ -41,5 +41,15 @@
 	"editor.smoothScrolling": true,
 	"explorer.confirmDragAndDrop": false,
 	"workbench.settings.useSplitJSON": true,
-	"editor.formatOnSave": true
+	"editor.formatOnSave": true,
+	"liveshare.featureSet": "insiders",
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
