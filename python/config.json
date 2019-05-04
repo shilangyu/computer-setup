@@ -1,3 +1,3 @@
 {
-	"global": ["virtualenv", "matplotlib"]
+	"global": ["matplotlib", "pipreqs"]
 }
