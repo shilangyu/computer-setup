@@ -11,6 +11,7 @@ Setup for a new computer (windows).
   - [fonts](#fonts)
   - [golang](#golang)
   - [npm](#npm)
+  - [powershell](#powershell)
   - [programs](#programs)
   - [python](#python)
   - [vs-code](#vs-code)
@@ -80,17 +81,25 @@ subfolder/
 
 - `data/`: _nothing_
 
+### powershell
+
+- `config.json`: _nothing_
+
+- `data/`: `profile.ps1` to be installed
+
 ### programs
 
 - `config.json`:
 
 ```
+
 {
-	"programs": {
-		"name": (programs to be installed by chocolatey),
-		"params": (params to be passed to the package)
-	}[]
+"programs": {
+"name": (programs to be installed by chocolatey),
+"params": (params to be passed to the package)
+}[]
 }
+
 ```
 
 - `data/`: _nothing_
@@ -100,9 +109,11 @@ subfolder/
 - `config.json`:
 
 ```
+
 {
-	"global": string[](packages to be installed globally)
+"global": string[](packages to be installed globally)
 }
+
 ```
 
 - `data/`: `.whl` files to be installed
@@ -112,18 +123,26 @@ subfolder/
 - `config.json`:
 
 ```
+
 {
-	"extensions": string[](extensions to be installed)
+"extensions": string[](extensions to be installed)
 }
+
 ```
 
 - `data/`:
 
 ```
+
 snippets/
-	lang1.json
-	lang2.json
-	lang3.json
+lang1.json
+lang2.json
+lang3.json
 keybindings.json
 settings.json
+
+```
+
+```
+
 ```
