@@ -9,6 +9,7 @@ function npmtemp() {
 	$newdir = "temp-$(randstr(5))"
 	New-Item -ItemType "directory" $newdir 
 	Set-Location $newdir
+	New-Item index.js
 	pnpm init -y
 	$packages = $args -Split "`n" 
 	foreach ($package in $packages) {
