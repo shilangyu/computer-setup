@@ -612,14 +612,14 @@
 					<value name="Count" type="long" data="1"/>
 					<value name="Cmd1" type="string" data='*PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;"'/>
 				</key>
-				<key name="Task4" modified="2019-05-07 07:36:40" build="180626">
+				<key name="Task4" modified="2019-05-09 22:15:31" build="180626">
 					<value name="Name" type="string" data="{PowerShell::PowerShell}"/>
 					<value name="Flags" type="dword" data="00000001"/>
 					<value name="Hotkey" type="dword" data="00000000"/>
 					<value name="GuiArgs" type="string" data=' /icon "%CMDER_ROOT%\icons\cmder.ico"'/>
 					<value name="Active" type="long" data="0"/>
 					<value name="Count" type="long" data="1"/>
-					<value name="Cmd1" type="string" data='-new_console:d:C:\Coding PowerShell -ExecutionPolicy Bypass -NoLogo -NoProfile -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;;function expl{explorer .};function gclone($url){git clone https://github.com/$url};"'/>
+					<value name="Cmd1" type="string" data='-new_console:d:C:\Coding PowerShell -ExecutionPolicy Bypass -NoLogo -NoExit -Command "Invoke-Expression &apos;Import-Module &apos;&apos;%ConEmuDir%\..\profile.ps1&apos;&apos;&apos;;"'/>
 				</key>
 				<key name="Task5" modified="2019-04-03 20:55:25" build="180626">
 					<value name="Name" type="string" data="{bash::mintty as Admin}"/>
