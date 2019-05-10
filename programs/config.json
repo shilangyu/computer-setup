@@ -9,6 +9,8 @@
 		{ "name": "anydesk", "params": [] },
 		{ "name": "vlc", "params": [] },
 		{ "name": "gimp", "params": [] },
-		{ "name": "cmder", "params": [] }
+		{ "name": "cmder", "params": [] },
+		{ "name": "docker-desktop", "params": [] },
+		{ "name": "docker-cli", "params": [] }
 	]
 }
