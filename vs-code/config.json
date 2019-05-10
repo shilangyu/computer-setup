@@ -15,6 +15,8 @@
 		"shd101wyy.markdown-preview-enhanced",
 		"slevesque.vscode-autohotkey",
 		"zhuangtongfa.Material-theme",
-		"dtsvet.vscode-wasm"
+		"dtsvet.vscode-wasm",
+		"PeterJausovec.vscode-docker",
+		"RobbOwen.synthwave-vscode"
 	]
 }
