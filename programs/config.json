@@ -11,6 +11,7 @@
 		{ "name": "gimp", "params": [] },
 		{ "name": "cmder", "params": [] },
 		{ "name": "docker-desktop", "params": [] },
-		{ "name": "docker-cli", "params": [] }
+		{ "name": "docker-cli", "params": [] },
+		{ "name": "bat", "params": [] }
 	]
 }
