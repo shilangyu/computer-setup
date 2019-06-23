@@ -22,3 +22,4 @@ function randstr($length) {
 }
 
 New-Alias -Name "npm" pnpm
+New-Alias -Name "npx" pnpx
