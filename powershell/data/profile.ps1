@@ -20,3 +20,5 @@ function npmtemp() {
 function randstr($length) {
 	return -join ((65..90) + (97..122) | Get-Random -Count $length | ForEach-Object { [char]$_ })
 }
+
+New-Alias -Name "npm" pnpm
