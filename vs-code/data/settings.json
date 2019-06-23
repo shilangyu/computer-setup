@@ -18,7 +18,6 @@
 	"editor.snippetSuggestions": "top",
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
-	"go.autocompleteUnimportedPackages": true,
 	"window.titleBarStyle": "custom",
 	"breadcrumbs.enabled": true,
 	"explorer.openEditors.visible": 0,
@@ -52,7 +51,33 @@
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
+	"go.useLanguageServer": true,
+	"go.autocompleteUnimportedPackages": true,
 	"material-icon-theme.files.associations": {
 		"*.go": "go_gopher"
+	},
+	"go.languageServerExperimentalFeatures": {
+		"diagnostics": true
+	},
+	"[go]": {
+		"editor.snippetSuggestions": "none",
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		}
+	},
+	"gopls": {
+		"usePlaceholders": true
+	},
+	"files.eol": "\n",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[python]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": true
+	},
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
 	}
 }
