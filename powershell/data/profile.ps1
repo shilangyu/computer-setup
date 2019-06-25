@@ -21,5 +21,25 @@ function randstr($length) {
 	return -join ((65..90) + (97..122) | Get-Random -Count $length | ForEach-Object { [char]$_ })
 }
 
+function g:c() {
+	git commit -m "$($args -Join ' ')"
+}
+
+function g:s() {
+	git status
+}
+
+function g:l() {
+	git log
+}
+
+function g:p() {
+	git push
+}
+
+
 New-Alias -Name "npm" pnpm
 New-Alias -Name "npx" pnpx
+
+
+$PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
