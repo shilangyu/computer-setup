@@ -13,5 +13,6 @@
 		{ "name": "docker-desktop", "params": [] },
 		{ "name": "docker-cli", "params": [] },
 		{ "name": "bat", "params": [] }
+		{ "name": "postman", "params": [] }
 	]
 }
