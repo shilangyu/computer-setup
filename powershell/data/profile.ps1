@@ -1,10 +1,6 @@
 function expl { 
 	explorer . 
 } 
-function gclone($url) { 
-	git clone https://github.com/$url 
-}
-
 function npmtemp() {
 	$newdir = "temp-$(randstr(5))"
 	New-Item -ItemType "directory" $newdir 
@@ -24,7 +20,9 @@ function randstr($length) {
 function g:c() {
 	git commit -m "$($args -Join ' ')"
 }
-
+function g:cl($url) { 
+	git clone https://github.com/$url 
+}
 function g:s() {
 	git status
 }
