@@ -13,6 +13,12 @@ function npmtemp() {
 	}
 }
 
+function serveo([Parameter(Mandatory = $true)]$customDomain, $port = "8080") {
+	while ($true) {
+		ssh -R "$($customDomain):80:localhost:$port" serveo.net
+	}
+}
+
 function randstr($length) {
 	return -join ((65..90) + (97..122) | Get-Random -Count $length | ForEach-Object { [char]$_ })
 }
