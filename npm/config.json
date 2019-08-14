@@ -1,3 +1,11 @@
 {
-	"global": ["nodemon", "create-react-app", "live-server", "uglify-es", "typescript", "pnpm"]
+	"global": [
+		"nodemon",
+		"create-react-app",
+		"live-server",
+		"depcheck",
+		"npm-name-cli",
+		"typescript",
+		"pnpm"
+	]
 }
