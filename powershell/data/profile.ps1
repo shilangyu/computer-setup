@@ -15,8 +15,15 @@ function npmtemp() {
 
 function serveo([Parameter(Mandatory = $true)]$customDomain, $port = "8080") {
 	while ($true) {
-		ssh -R "$($customDomain):80:localhost:$port" serveo.net
+		ssh -R "$($customDomain):80:$(ipv4):$port" serveo.net
 	}
+}
+
+function ipv4 {
+	ipconfig | Where-Object { 
+		$_ -match 'IPv4.+\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' 
+	} | Out-Null
+	return $Matches[1]
 }
 
 function randstr($length) {
