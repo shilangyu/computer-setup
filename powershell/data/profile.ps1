@@ -16,6 +16,7 @@ function npmtemp() {
 function serveo([Parameter(Mandatory = $true)]$customDomain, $port = "8080") {
 	while ($true) {
 		ssh -R "$($customDomain):80:$(ipv4):$port" serveo.net
+		sleep 2
 	}
 }
 
@@ -51,6 +52,11 @@ function g:p() {
 
 New-Alias -Name "npm" pnpm
 New-Alias -Name "npx" pnpx
+
+function which($cmd) {
+	return Get-Command $cmd | Format-Table Name, Path
+}
+
 
 
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
