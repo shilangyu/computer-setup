@@ -54,7 +54,7 @@ New-Alias -Name "npm" pnpm
 New-Alias -Name "npx" pnpx
 
 function which($cmd) {
-	return Get-Command $cmd | Format-Table Name, Path
+	return Get-Command $cmd | Select-Object Name, Path
 }
 
 
