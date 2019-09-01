@@ -79,5 +79,6 @@
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": true
-	}
+	},
+	"editor.renderWhitespace": "selection"
 }
