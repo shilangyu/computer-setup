@@ -50,7 +50,7 @@ subfolder/
 ### cmder
 
 - `config.json`: _nothing_
-- `data/`: `settings.xml`
+- `data/`: `settings.xml` to be installed
 
 ### golang
 
@@ -104,7 +104,7 @@ subfolder/
 ```
 
 {
-"global": string[](packages to be installed globally)
+  "global": string[](packages to be installed globally)
 }
 
 ```
@@ -118,7 +118,7 @@ subfolder/
 ```
 
 {
-"extensions": string[](extensions to be installed)
+  "extensions": string[](extensions to be installed)
 }
 
 ```
@@ -133,9 +133,5 @@ lang2.json
 lang3.json
 keybindings.json
 settings.json
-
-```
-
-```
 
 ```
