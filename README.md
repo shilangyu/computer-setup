@@ -80,7 +80,9 @@ subfolder/
 
 - `config.json`: _nothing_
 
-- `data/`: `profile.ps1` to be installed
+- `data/`:
+  - `profile.ps1` to be installed
+  - `startup.ps1` to be installed
 
 ### programs
 
