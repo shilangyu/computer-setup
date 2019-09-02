@@ -52,11 +52,6 @@ subfolder/
 - `config.json`: _nothing_
 - `data/`: `settings.xml`
 
-### fonts
-
-- `config.json`: _nothing_
-- `data/`: `.ttf` font files to be installed
-
 ### golang
 
 - `config.json`:
@@ -69,7 +64,7 @@ subfolder/
 
 - `data/`: _nothing_
 
-### npm
+### npm (through pnpm)
 
 - `config.json`:
 
