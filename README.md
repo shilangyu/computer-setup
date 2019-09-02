@@ -94,10 +94,8 @@ subfolder/
 ```
 
 {
-"programs": {
-"name": (programs to be installed by chocolatey),
-"params": (params to be passed to the package)
-}[]
+  "buckets": string[](scoop buckets to be added),
+  "programs": string[](programs to be installed by scoop),
 }
 
 ```
