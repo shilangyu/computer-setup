@@ -1,11 +1,11 @@
 {
 	"global": [
+		"pnpm",
 		"nodemon",
 		"create-react-app",
 		"live-server",
 		"depcheck",
 		"npm-name-cli",
-		"typescript",
-		"pnpm"
+		"typescript"
 	]
 }
