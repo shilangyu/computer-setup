@@ -1,6 +1,11 @@
 // Place your key bindings in this file to overwrite the defaults
 [
 	{
+		"key": "ctrl+shift+alt+s",
+		"command": "git.stageSelectedRanges",
+		"when": "editorTextFocus"
+	},
+	{
 		"key": "ctrl+shift+s",
 		"command": "workbench.action.files.saveAll"
 	},
