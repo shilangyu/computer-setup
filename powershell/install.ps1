@@ -4,5 +4,6 @@ $config = Get-Content config.json | ConvertFrom-Json
 Copy-Item ./data/profile.ps1 $profile
 
 # create startup script
-Copy-Item ./data/startup.ps1 "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\startup.ps1"
-"@ECHO OFF`nPowerShell.exe -Command `"./startup.ps1`"`nPAUSE" > "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup\startup.bat"
+$startupPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Startup"
+Copy-Item ./data/startup.ps1 "$startupPath/startup.ps1"
+[IO.File]::WriteAllLines("$startupPath/startup.bat", "@ECHO OFF`nPowerShell.exe -Command `"& '$startupPath/startup.ps1'`"")
