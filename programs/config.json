@@ -1,5 +1,5 @@
 {
-	"buckets": ["extras", "nerd-fonts"],
+	"buckets": ["extras", "nerd-fonts", "games"],
 	"programs": [
 		"cmder-full",
 		"sudo",
@@ -24,6 +24,10 @@
 		"windirstat",
 		"youtube-dl",
 		"gimp",
-		"processing"
+		"processing",
+		"visualboyadvance-m",
+		"fd",
+		"wox",
+		"upx"
 	]
 }
