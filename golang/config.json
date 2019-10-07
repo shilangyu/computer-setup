@@ -1,7 +1,9 @@
 {
 	"packages": [
-		"github.com/zalando/skipper/...",
 		"github.com/shilangyu/driveignore",
+		"github.com/shilangyu/brainfuck",
+		"github.com/shilangyu/omnirun",
+		"github.com/shilangyu/typer-go",
 		"golang.org/x/perf/cmd/benchstat"
 	]
 }

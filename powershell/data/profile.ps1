@@ -24,7 +24,7 @@ function ipv4 {
 	ipconfig | Where-Object { 
 		$_ -match 'IPv4.+\s(\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})' 
 	} | Out-Null
-	return $Matches[1]
+return $Matches[1]
 }
 
 function randstr($length) {
@@ -57,6 +57,9 @@ function which($cmd) {
 	return Get-Command $cmd | Select-Object Name, Path
 }
 
+function compress-mp4($vid) {
+	ffmpeg -i $vid -vcodec h264 -acodec aac compressed.mp4
+}
 
 
 $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'

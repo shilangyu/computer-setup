@@ -8,14 +8,20 @@
 		"ms-python.python",
 		"ms-vscode.cpptools",
 		"ms-vscode.Go",
-		"ms-vscode.PowerShell",
+		"yzhang.markdown-all-in-one",
+		"ms-vscode.powershell",
 		"ms-vsliveshare.vsliveshare",
 		"PKief.material-icon-theme",
-		"shd101wyy.markdown-preview-enhanced",
 		"slevesque.vscode-autohotkey",
 		"zhuangtongfa.Material-theme",
 		"dtsvet.vscode-wasm",
 		"PeterJausovec.vscode-docker",
-		"RobbOwen.synthwave-vscode"
+		"RobbOwen.synthwave-vscode",
+		"attilabuti.brainfuck-syntax",
+		"cssho.vscode-svgviewer",
+		"jpoissonnier.vscode-styled-components",
+		"mikestead.dotenv",
+		"naumovs.color-highlight",
+		"redhat.vscode-yaml"
 	]
 }

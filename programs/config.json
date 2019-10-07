@@ -16,7 +16,6 @@
 		"mongodb",
 		"mongodb-compass-community",
 		"nodejs",
-		"octave",
 		"postman",
 		"python",
 		"vlc",
@@ -28,6 +27,10 @@
 		"visualboyadvance-m",
 		"fd",
 		"wox",
-		"upx"
+		"upx",
+		"carnac",
+		"docker",
+		"pandoc",
+		"vim"
 	]
 }

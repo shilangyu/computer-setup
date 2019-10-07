@@ -15,6 +15,8 @@
 	"Functional component": {
 		"prefix": "fc",
 		"body": [
+			"import React from 'react'",
+			"",
 			"interface Props {",
 			"\t${2:props}",
 			"}",
@@ -30,6 +32,8 @@
 	"Class component": {
 		"prefix": "cc",
 		"body": [
+			"import React from 'react'",
+			"",
 			"interface Props {",
 			"\t${1:props}",
 			"}",
@@ -45,5 +49,36 @@
 			"export default ${TM_FILENAME_BASE}"
 		],
 		"description": "Class component"
+	},
+	"Styled components": {
+		"prefix": "sc",
+		"body": [
+			"import styled from 'styled-components'",
+			"",
+			"const ${1:name} = styled${2:.component}`",
+			"\t$0",
+			"`"
+		],
+		"description": "Styled components"
+	},
+	"Preact": {
+		"prefix": "prx",
+		"body": [
+			"import { FunctionComponent, h } from 'preact'",
+			"import { useState } from 'preact/hooks'",
+			"",
+			"interface Props {",
+			"",
+			"}",
+			"",
+			"const ${TM_FILENAME_BASE}: FunctionComponent<Props> = () => {",
+			"\tconst [state, setState] = useState(0)",
+			"",
+			"\treturn ${0:jsx}",
+			"}",
+			"",
+			"export default ${TM_FILENAME_BASE}"
+		],
+		"description": "Preact"
 	}
 }

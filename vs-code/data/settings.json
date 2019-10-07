@@ -5,7 +5,7 @@
 	"editor.fontLigatures": true,
 	"path-intellisense.extensionOnImport": true,
 	"explorer.confirmDelete": false,
-	"python.pythonPath": "C:\\Python37\\python.exe",
+	"python.pythonPath": "C:\\Users\\Lenovo\\scoop\\shims\\python.exe",
 	"git.confirmSync": false,
 	"workbench.iconTheme": "material-icon-theme",
 	"window.zoomLevel": 0,
@@ -60,7 +60,6 @@
 		"diagnostics": true
 	},
 	"[go]": {
-		"editor.snippetSuggestions": "none",
 		"editor.codeActionsOnSave": {
 			"source.organizeImports": true
 		}
@@ -80,5 +79,14 @@
 	"editor.codeActionsOnSave": {
 		"source.organizeImports": true
 	},
-	"editor.renderWhitespace": "selection"
+	"editor.renderWhitespace": "selection",
+	"editor.cursorSurroundingLines": 10,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": false,
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
