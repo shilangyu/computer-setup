@@ -4,17 +4,18 @@ Setup for a new computer (windows).
 
 ## table of contents
 
-- [usage](#usage)
-- [structure](#structure)
-- [folders](#folders)
-  - [cmder](#cmder)
-  - [fonts](#fonts)
-  - [golang](#golang)
-  - [npm](#npm)
-  - [powershell](#powershell)
-  - [programs](#programs)
-  - [python](#python)
-  - [vs-code](#vs-code)
+- [computer-setup](#computer-setup)
+  - [table of contents](#table-of-contents)
+    - [usage](#usage)
+    - [structure](#structure)
+  - [folders](#folders)
+    - [cmder](#cmder)
+    - [golang](#golang)
+    - [npm (through pnpm)](#npm-through-pnpm)
+    - [powershell](#powershell)
+    - [programs](#programs)
+    - [python](#python)
+    - [vs-code](#vs-code)
 
 ---
 
@@ -111,7 +112,7 @@ subfolder/
 
 ```
 
-- `data/`: `.whl` files to be installed
+- `data/`: _nothing_
 
 ### vs-code
 
