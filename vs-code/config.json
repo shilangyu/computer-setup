@@ -22,6 +22,9 @@
 		"jpoissonnier.vscode-styled-components",
 		"mikestead.dotenv",
 		"naumovs.color-highlight",
-		"redhat.vscode-yaml"
+		"redhat.vscode-yaml",
+		"Dart-Code.dart-code",
+		"Dart-Code.flutter",
+		"streetsidesoftware.code-spell-checker"
 	]
 }

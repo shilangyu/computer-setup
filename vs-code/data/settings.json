@@ -88,5 +88,11 @@
 	},
 	"[markdown]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"window.menuBarVisibility": "toggle",
+	"cSpell.enabledLanguageIds": ["latex", "markdown", "plaintext", "text", "yaml", "yml"],
+	"cSpell.userWords": ["injective", "surjective"]
 }
