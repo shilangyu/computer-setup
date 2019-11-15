@@ -1,0 +1,4 @@
+[character]
+	symbol = "➜"
+[directory]
+	truncation_length = 8 

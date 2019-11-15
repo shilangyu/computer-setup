@@ -1,0 +1,106 @@
+{
+	"workbench.colorTheme": "SynthWave '84",
+	"workbench.startupEditor": "newUntitledFile",
+	"editor.fontFamily": "Fira Code",
+	"editor.fontLigatures": true,
+	"path-intellisense.extensionOnImport": true,
+	"explorer.confirmDelete": false,
+	"python.pythonPath": "/bin/python",
+	"git.confirmSync": false,
+	"workbench.iconTheme": "material-icon-theme",
+	"window.zoomLevel": 0,
+	"editor.insertSpaces": false,
+	"editor.tabSize": 2,
+	"editor.cursorBlinking": "expand",
+	"editor.minimap.renderCharacters": false,
+	"editor.minimap.enabled": false,
+	"editor.wordWrap": "on",
+	"editor.snippetSuggestions": "top",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"window.titleBarStyle": "custom",
+	"breadcrumbs.enabled": true,
+	"explorer.openEditors.visible": 0,
+	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+	"workbench.settings.editor": "json",
+	"files.exclude": {
+		"**/.git": true,
+		"**/.svn": true,
+		"**/.hg": true,
+		"**/CVS": true,
+		"**/.DS_Store": true,
+		"**/node_modules": true
+	},
+	"git.autofetch": true,
+	"editor.cursorSmoothCaretAnimation": true,
+	"editor.smoothScrolling": true,
+	"explorer.confirmDragAndDrop": false,
+	"workbench.settings.useSplitJSON": true,
+	"editor.formatOnSave": true,
+	"liveshare.featureSet": "insiders",
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"go.useLanguageServer": true,
+	"go.autocompleteUnimportedPackages": true,
+	"material-icon-theme.files.associations": {
+		"*.go": "go_gopher"
+	},
+	"go.languageServerExperimentalFeatures": {
+		"diagnostics": true
+	},
+	"[go]": {
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		}
+	},
+	"gopls": {
+		"usePlaceholders": true
+	},
+	"files.eol": "\n",
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[python]": {
+		"editor.tabSize": 4,
+		"editor.insertSpaces": true
+	},
+	"typescript.updateImportsOnFileMove.enabled": "always",
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	},
+	"editor.renderWhitespace": "selection",
+	"editor.cursorSurroundingLines": 10,
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": false,
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[markdown]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml"
+	},
+	"window.menuBarVisibility": "toggle",
+	"cSpell.enabledLanguageIds": [
+		"latex",
+		"markdown",
+		"plaintext",
+		"text",
+		"yaml",
+		"yml"
+	],
+	"cSpell.userWords": [
+		"injective",
+		"surjective"
+	],
+	"C_Cpp.clang_format_path": "/usr/bin/clang-format",
+	// "editor.fontLigatures": "'ss02', 'ss19'"
+}
