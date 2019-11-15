@@ -23,3 +23,7 @@ Code/User/workspaceStorage/ \
 for dir in $config_cleanup
 	rm config/$dir -r
 end
+
+rm -r other_config
+mkdir other_config
+guake --save-preferences other_config/guake.conf
