@@ -21,7 +21,6 @@
 	"window.titleBarStyle": "custom",
 	"breadcrumbs.enabled": true,
 	"explorer.openEditors.visible": 0,
-	"terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
 	"workbench.settings.editor": "json",
 	"files.exclude": {
 		"**/.git": true,
@@ -54,11 +53,6 @@
 	},
 	"go.languageServerExperimentalFeatures": {
 		"diagnostics": true
-	},
-	"[go]": {
-		"editor.codeActionsOnSave": {
-			"source.organizeImports": true
-		}
 	},
 	"gopls": {
 		"usePlaceholders": true
@@ -96,10 +90,6 @@
 		"text",
 		"yaml",
 		"yml"
-	],
-	"cSpell.userWords": [
-		"injective",
-		"surjective"
 	],
 	"C_Cpp.clang_format_path": "/usr/bin/clang-format",
 	// "editor.fontLigatures": "'ss02', 'ss19'"

@@ -34,5 +34,23 @@
 		"key": "ctrl+b",
 		"command": "-markdown.extension.editing.toggleBold",
 		"when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+	},
+	{
+		"key": "ctrl+shift+alt+s",
+		"command": "git.stageSelectedRanges",
+		"when": "editorTextFocus",
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.files.saveAll"
+	},
+	{
+		"key": "ctrl+shift+6",
+		"command": "editor.action.transformToUppercase",
+		"when": "editorTextFocus"
+	},
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.files.newUntitledFile"
 	}
 ]
