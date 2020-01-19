@@ -1,14 +1,13 @@
 {
 	"workbench.colorTheme": "SynthWave '84",
 	"workbench.startupEditor": "newUntitledFile",
-	"editor.fontFamily": "Fira Code",
-	"editor.fontLigatures": true,
+	"editor.fontFamily": "JetBrains mono",
 	"path-intellisense.extensionOnImport": true,
 	"explorer.confirmDelete": false,
 	"python.pythonPath": "/bin/python",
 	"git.confirmSync": false,
 	"workbench.iconTheme": "material-icon-theme",
-	"window.zoomLevel": 0,
+	"window.zoomLevel": -1,
 	"editor.insertSpaces": false,
 	"editor.tabSize": 2,
 	"editor.cursorBlinking": "expand",
@@ -92,5 +91,11 @@
 		"yml"
 	],
 	"C_Cpp.clang_format_path": "/usr/bin/clang-format",
-	// "editor.fontLigatures": "'ss02', 'ss19'"
+	"editor.fontLigatures": "'ss01', 'ss02', 'ss04', 'ss06', 'zero'",
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/bower_components": true,
+		"**/*.code-search": true,
+		"**/yarn.lock": true
+	}
 }

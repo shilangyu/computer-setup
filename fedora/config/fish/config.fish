@@ -13,22 +13,23 @@ end
 
 if status --is-interactive
 	# abbreviations
-	# git
 	abbr -g gp 'git push'
 	abbr -g gpl 'git pull'
 	abbr -g gcl 'git clone https://github.com/'
 	abbr -g gs 'git status'
 	abbr -g gc 'git commit -m'
 	abbr -g gl 'git log'
-	# dnf
+	
 	abbr -g dnf 'dnf -C'
-	# code
+	
 	abbr -g c 'code .'
-	# xclip
+	
 	abbr -g scb 'xclip -sel clip'
 	abbr -g gcb 'xclip -o'
 	abbr -g cbf 'xclip -selection clipboard -t image/png -o >'
-	# unix commands
+	
+	abbr -g nau 'nautilus .'
+
 	abbr -g ls 'ls -a'
 	abbr -g o 'xdg-open'
 	abbr -g exe 'chmod +x'
@@ -41,7 +42,6 @@ if status --is-interactive
 end
 
 set fish_user_paths "$HOME/.local/bin" "$HOME/.npm-global/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
-
 
 # scriptlets
 function read_confirm --description "asks for [y/n]"
@@ -66,10 +66,9 @@ function backup --description "backups all files to ~/backup"
 		end
 	end
 
-	set __d (pwd)
-	cd ~
-	mkdir backup
+	mkdir -p ~/backup/raw
 
+	# relative to ~/
 	set to_backup \
 	wayback \
 	coding \
@@ -83,12 +82,29 @@ function backup --description "backups all files to ~/backup"
 	.git 
 	
 	for dir in $to_backup
-		cd $dir
-		7z a ../backup/$dir.zip * -xr!$excluded
-		cd ..
+		rsync -avr '--exclude=*/'$excluded'*' ~/$dir ~/backup/raw 1> /dev/null
+		7z a ~/backup/$dir.zip ~/$dir/* -xr!$excluded
 	end
-
-	cd $__d
 end
+
+function ipv4 --description "returns your private ip"
+	echo (hostname -I | awk '{print $1}')
+end
+
+function serveo --description "exposes local network"
+	while true
+		ssh -R $argv[1]":80:"(ipv4)":"$argv[2] serveo.net
+		sleep 1
+	end
+end
+
+function ts_node
+	set dir temp(random)
+	if tsc --outDir $dir
+		node $dir/$argv[1]
+	end
+	rm -rf $dir
+end
+
 
 starship init fish | source

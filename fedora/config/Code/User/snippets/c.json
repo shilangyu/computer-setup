@@ -7,7 +7,8 @@
   "initial setup": {
     "prefix": "init",
     "body": [
-      "#include<stdio.h>",
+      "#include <stdio.h>",
+      "#include <stdlib.h>",
       "",
       "int main(${1:int argc, char *argv[]}) {",
       "\t$0",

@@ -11,7 +11,7 @@
   },
   "print to console": {
     "prefix": "log",
-    "body": ["fmt.Println()"],
+    "body": ["fmt.Println($0)"],
     "description": "print to console"
   },
   "print to file": {
