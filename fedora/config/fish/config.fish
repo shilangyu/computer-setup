@@ -6,9 +6,21 @@ function fish_greeting
   # intentionally left blank
 end
 
+
+function __fd
+  set p (find . -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m)
+
+	if test $p
+		cd $p
+		commandline -f repaint
+	end
+end
+
+
 function fish_user_key_bindings
  	bind \b backward-kill-path-component
 	bind \e\[3\;5~ kill-word
+	bind \ed __fd
 end	
 
 if status --is-interactive
@@ -19,6 +31,7 @@ if status --is-interactive
 	abbr -g gs 'git status'
 	abbr -g gc 'git commit -m'
 	abbr -g gl 'git log'
+	abbr -g gct 'git ls-files | grep -Ev "yarn.lock" | xargs wc -l'
 	
 	abbr -g dnf 'dnf -C'
 	
@@ -26,13 +39,15 @@ if status --is-interactive
 	
 	abbr -g scb 'xclip -sel clip'
 	abbr -g gcb 'xclip -o'
-	abbr -g cbf 'xclip -selection clipboard -t image/png -o >'
+	abbr -g fcb 'xclip -selection clipboard -t image/png -o >'
 	
 	abbr -g nau 'nautilus .'
 
 	abbr -g ls 'ls -a'
 	abbr -g o 'xdg-open'
 	abbr -g exe 'chmod +x'
+	
+	abbr -g tb 'nc termbin.com 9999'
 
 	# starting directory
 	cd ~/coding
@@ -41,7 +56,7 @@ if status --is-interactive
 	alias ls lsd
 end
 
-set fish_user_paths "$HOME/.local/bin" "$HOME/.npm-global/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
+set fish_user_paths "$HOME/flutter/bin" "$HOME/.local/bin" "$HOME/.npm-global/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
 
 # scriptlets
 function read_confirm --description "asks for [y/n]"
@@ -106,5 +121,27 @@ function ts_node
 	rm -rf $dir
 end
 
+function upgrade
+	set yes false
+	if test $argv[1] = '-y' 2> /dev/null
+		set yes true
+	end
+
+	# if not test (id -u) -eq 0
+	# 	echo 'You need sudo for this command'
+	# 	return 1
+	# end
+	if $yes
+		sudo dnf upgrade -y
+		flatpak update -y
+		yarn global upgrade --latest
+		cargo install --list | awk 'NR % 2 == 0' | xargs cargo install
+	else
+		sudo dnf upgrade
+		flatpak update
+		yarn global upgrade-interactive --latest
+		cargo install --list | awk 'NR % 2 == 0' | xargs cargo install
+	end
+end
 
 starship init fish | source

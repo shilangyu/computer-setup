@@ -1,7 +1,7 @@
 {
-	"workbench.colorTheme": "SynthWave '84",
+	"workbench.colorTheme": "Dracula.min",
 	"workbench.startupEditor": "newUntitledFile",
-	"editor.fontFamily": "JetBrains mono",
+	"editor.fontFamily": "JetBrains Mono",
 	"path-intellisense.extensionOnImport": true,
 	"explorer.confirmDelete": false,
 	"python.pythonPath": "/bin/python",
