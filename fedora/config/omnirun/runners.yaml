@@ -12,9 +12,9 @@
   - brainfuck $or_file
 - exts: [cpp]
   run:
-  - g++ $or_file -o abc123.exe
-  - ./abc123.exe
+  - g++ -Wall $or_file 
+  - ./a.out
 - exts: [c]
   run:
-  - gcc $or_file -o abc123.exe
-  - ./abc123.exe
+  - gcc -Wall $or_file 
+  - ./a.out

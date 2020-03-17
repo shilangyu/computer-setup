@@ -29,26 +29,14 @@
 		],
 		"description": "Functional component"
 	},
-	"Class component": {
-		"prefix": "cc",
+	"Use async": {
+		"prefix": "ua",
 		"body": [
-			"import React from 'react'",
+			"import useAsync from 'use-async-react'",
 			"",
-			"interface Props {",
-			"\t${1:props}",
-			"}",
-			"",
-			"class ${TM_FILENAME_BASE} extends React.Component<Props> {",
-			"\trender() {",
-			"\t\treturn (",
-			"\t\t\t${0:tsx}",
-			"\t\t)",
-			"\t}",
-			"}",
-			"",
-			"export default ${TM_FILENAME_BASE}"
+			"const { call: ${2:funcName}, loading, error } = useAsync(${2:funcName})"
 		],
-		"description": "Class component"
+		"description": "Functional component"
 	},
 	"Styled components": {
 		"prefix": "sc",
@@ -60,6 +48,15 @@
 			"`"
 		],
 		"description": "Styled components"
+	},
+	"Use state hook": {
+		"prefix": "us",
+		"body": [
+			"import {useState} from 'react'",
+			"",
+			"const [${1:name}, set$0${1:name}] = useState(${2:initial value})",
+		],
+		"description": "Use state hook"
 	},
 	"Preact": {
 		"prefix": "prx",

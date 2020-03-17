@@ -8,8 +8,8 @@ end
 
 
 function __fd
-  set p (find . -path '*/\.*' -prune -o -type d -print 2> /dev/null | fzf +m)
-
+	set p (fd -H --no-ignore --exclude node_modules --exclude .git --type d 2> /dev/null | fzf +m)
+	
 	if test $p
 		cd $p
 		commandline -f repaint
@@ -27,7 +27,7 @@ if status --is-interactive
 	# abbreviations
 	abbr -g gp 'git push'
 	abbr -g gpl 'git pull'
-	abbr -g gcl 'git clone https://github.com/'
+	abbr -g gcl 'git clone ssh://git@github.com/'
 	abbr -g gs 'git status'
 	abbr -g gc 'git commit -m'
 	abbr -g gl 'git log'
@@ -47,13 +47,18 @@ if status --is-interactive
 	abbr -g o 'xdg-open'
 	abbr -g exe 'chmod +x'
 	
-	abbr -g tb 'nc termbin.com 9999'
+	abbr -g tb 'nc termbin.com 9999 | xclip -sel clip'
 
-	# starting directory
-	cd ~/coding
+	abbr -g dua 'dua -f binary'
 
 	# aliases
 	alias ls lsd
+	alias vim nvim
+	alias cat bat
+	alias grep rg
+
+	# starting directory
+	cd ~/coding
 end
 
 set fish_user_paths "$HOME/flutter/bin" "$HOME/.local/bin" "$HOME/.npm-global/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
@@ -94,7 +99,8 @@ function backup --description "backups all files to ~/backup"
 
 	set excluded \
 	node_modules \
-	.git 
+	.git \
+	target
 	
 	for dir in $to_backup
 		rsync -avr '--exclude=*/'$excluded'*' ~/$dir ~/backup/raw 1> /dev/null
@@ -135,13 +141,14 @@ function upgrade
 		sudo dnf upgrade -y
 		flatpak update -y
 		yarn global upgrade --latest
-		cargo install --list | awk 'NR % 2 == 0' | xargs cargo install
 	else
 		sudo dnf upgrade
 		flatpak update
 		yarn global upgrade-interactive --latest
-		cargo install --list | awk 'NR % 2 == 0' | xargs cargo install
 	end
+
+	cargo install --list | grep ' v\\d.+:' -r '' | xargs cargo install
+	rustup update
 end
 
 starship init fish | source

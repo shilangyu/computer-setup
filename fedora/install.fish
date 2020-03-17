@@ -10,8 +10,6 @@ sudo dnf check-update
 set dnf_packages \
 rpmfusion-free-release \
 rpmfusion-nonfree-release \
-albert \
-bat \
 cargo \
 chromium \
 clang-tools-extra \
@@ -27,7 +25,7 @@ p7zip \
 pandoc \
 rust \
 texlive \
-vim \
+neovim \
 visualboyadvance-m \
 xclip \
 youtube-dl \
@@ -38,6 +36,12 @@ sudo dnf upgrade -y
 set cargo_packages \
 lsd \
 starship \
+bottom \
+mdbook \
+dua-cli \
+fd-find \
+hyperfine \
+ripgrep \
 
 for crate in $cargo_packages
 	cargo install $crate
@@ -45,7 +49,6 @@ end
 
 set go_packages \
 github.com/shilangyu/brainfuck \
-github.com/cjbassi/gotop \
 github.com/shilangyu/omnirun \
 github.com/shilangyu/typer-go \
 
