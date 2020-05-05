@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Dracula.min",
+  "workbench.colorTheme": "Material Theme Darker",
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontFamily": "JetBrains Mono",
   "path-intellisense.extensionOnImport": true,
@@ -7,7 +7,7 @@
   "python.pythonPath": "/bin/python",
   "git.confirmSync": false,
   "workbench.iconTheme": "material-icon-theme",
-  "window.zoomLevel": -1,
+  "window.zoomLevel": -2,
   "editor.insertSpaces": false,
   "editor.tabSize": 2,
   "editor.cursorBlinking": "expand",
@@ -82,14 +82,6 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "window.menuBarVisibility": "toggle",
-  "cSpell.enabledLanguageIds": [
-    "latex",
-    "markdown",
-    "plaintext",
-    "text",
-    "yaml",
-    "yml"
-  ],
   "C_Cpp.clang_format_path": "/usr/bin/clang-format",
   "editor.fontLigatures": "'ss01', 'ss02', 'ss04', 'ss06', 'zero'",
   "search.exclude": {
@@ -99,5 +91,34 @@
     "**/yarn.lock": true
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  "C_Cpp.clang_format_style": "Google"
+  "C_Cpp.clang_format_style": "Chromium",
+  "cSpell.enableFiletypes": [
+    "!asciidoc",
+    "!c",
+    "!cpp",
+    "!csharp",
+    "!css",
+    "!git-commit",
+    "!go",
+    "!handlebars",
+    "!jade",
+    "!java",
+    "!javascript",
+    "!javascriptreact",
+    "!less",
+    "!php",
+    "!pug",
+    "!python",
+    "!rust",
+    "!scss",
+    "!typescript",
+    "!typescriptreact",
+    "csv",
+    "toml"
+  ],
+  "workbench.preferredDarkColorTheme": "Material Theme Darker",
+  "workbench.preferredLightColorTheme": "Dracula.min Light",
+  "editor.renameOnType": true,
+  "extensions.ignoreRecommendations": false,
+  "java.configuration.checkProjectSettingsExclusions": false
 }

@@ -18,7 +18,6 @@ ffmpeg \
 fira-code-fonts \
 gnome-tweaks \
 golang \
-guake \
 neofetch \
 nodejs \
 p7zip \

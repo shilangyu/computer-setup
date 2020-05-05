@@ -7,7 +7,7 @@
 	"Print to console": {
 		"prefix": "log",
 		"body": [
-			"cout << $1;",
+			"std::cout << $1${0: << std::endl};",
 		],
 		"description": "Log output to console"
 	},

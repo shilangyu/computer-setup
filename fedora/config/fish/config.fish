@@ -59,9 +59,15 @@ if status --is-interactive
 
 	# starting directory
 	cd ~/coding
+
+	# run tmux
+	if not set -q TMUX
+			exec tmux
+	end
 end
 
 set fish_user_paths "$HOME/flutter/bin" "$HOME/.local/bin" "$HOME/.npm-global/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
+
 
 # scriptlets
 function read_confirm --description "asks for [y/n]"
@@ -149,6 +155,33 @@ function upgrade
 
 	cargo install --list | grep ' v\\d.+:' -r '' | xargs cargo install
 	rustup update
+	deno upgrade
 end
 
+function fix-touchpad 
+	sudo rmmod rmi_smbus
+	sudo modprobe rmi_smbus
+end
+
+function yarn-restart
+	rm -rf node_modules && yarn
+end
+
+function file-parts
+	string split -m1 -r . $argv[1]
+end
+
+function compress-vid
+	set input (file-parts $argv[1])
+	ffmpeg -i $argv[1] $input[1]-compressed.$input[2]
+end
+
+function lang-versions
+	printf 'node ' && node -v
+	go version
+	cargo version
+	python --version
+end
+
+zoxide init fish | source
 starship init fish | source
