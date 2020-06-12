@@ -44,7 +44,7 @@ if status --is-interactive
 	abbr -g nau 'nautilus .'
 
 	abbr -g ls 'ls -a'
-	abbr -g o 'xdg-open'
+	abbr -g o 'open'
 	abbr -g exe 'chmod +x'
 	
 	abbr -g tb 'nc termbin.com 9999 | xclip -sel clip'
@@ -62,6 +62,8 @@ if status --is-interactive
 
 	# run tmux
 	if not set -q TMUX
+			# for some weird reason the config is reset on every startup? I need to load it manually each time
+			tmux source-file ~/.config/tmux/tmux.conf
 			exec tmux
 	end
 end
@@ -155,7 +157,6 @@ function upgrade
 
 	cargo install --list | grep ' v\\d.+:' -r '' | xargs cargo install
 	rustup update
-	deno upgrade
 end
 
 function fix-touchpad 

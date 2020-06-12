@@ -7,8 +7,10 @@ set config_backup \
 	typer-go/ \
 	omnirun/ \
 	starship.toml \
-	tmux \
-	alacritty \
+	tmux/ \
+	alacritty/ \
+	bottom/ \
+	mpv/ \
 
 for dir in $config_backup
 	cp ~/.config/$dir . -r --parents

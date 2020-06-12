@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Material Theme Darker",
+  "workbench.colorTheme": "Dracula.min Light",
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontFamily": "JetBrains Mono",
   "path-intellisense.extensionOnImport": true,
@@ -120,5 +120,7 @@
   "workbench.preferredLightColorTheme": "Dracula.min Light",
   "editor.renameOnType": true,
   "extensions.ignoreRecommendations": false,
-  "java.configuration.checkProjectSettingsExclusions": false
+  "java.configuration.checkProjectSettingsExclusions": false,
+  "cSpell.language": "en",
+  "java.semanticHighlighting.enabled": true
 }

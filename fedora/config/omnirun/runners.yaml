@@ -1,29 +1,29 @@
 - exts: [ts]
   run:
-  - deno $or_file
+    - deno $or_file
 - exts: [js]
   run:
-  - node $or_file
+    - node $or_file
 - exts: [go]
   run:
-  - go run $or_file
+    - go run $or_file
 - exts: [py]
   run:
-  - python $or_file
+    - python $or_file
 - exts: [bf]
   run:
-  - brainfuck $or_file
+    - brainfuck $or_file
 - exts: [cpp]
   run:
-  - g++ -Wall -Wextra -pedantic -std=c++2a $or_file 
-  - ./a.out
-  - rm a.out
+    - g++ -Wall -Wextra -pedantic -std=c++2a $or_file
+    - ./a.out
+    - rm a.out
 - exts: [c]
   run:
-  - gcc -Wall $or_file 
-  - ./a.out
-  - rm a.out
+    - gcc -Wall $or_file
+    - ./a.out
+    - rm a.out
 - exts: [rs]
   run:
-  - rustc $or_file -o a.out
-  - ./a.out
+    - rustc $or_file -o a.out
+    - ./a.out
