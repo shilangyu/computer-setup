@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Dracula.min Light",
+  "workbench.colorTheme": "Material Theme Darker",
   "workbench.startupEditor": "newUntitledFile",
   "editor.fontFamily": "JetBrains Mono",
   "path-intellisense.extensionOnImport": true,
@@ -122,5 +122,6 @@
   "extensions.ignoreRecommendations": false,
   "java.configuration.checkProjectSettingsExclusions": false,
   "cSpell.language": "en",
-  "java.semanticHighlighting.enabled": true
+  "java.semanticHighlighting.enabled": true,
+  "julia.enableTelemetry": false
 }

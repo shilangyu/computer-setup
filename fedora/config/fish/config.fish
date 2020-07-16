@@ -51,6 +51,8 @@ if status --is-interactive
 
 	abbr -g dua 'dua -f binary'
 
+	abbr -g dl 'youtube-dl -f="bestvideo[height<1601]+bestaudio"'
+
 	# aliases
 	alias ls lsd
 	alias vim nvim

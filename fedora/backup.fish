@@ -10,6 +10,7 @@ set config_backup \
 	tmux/ \
 	alacritty/ \
 	bottom/ \
+	nvim/ \
 	mpv/ \
 
 for dir in $config_backup
