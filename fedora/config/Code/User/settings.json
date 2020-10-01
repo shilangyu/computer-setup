@@ -1,12 +1,10 @@
 {
-  "workbench.colorTheme": "Material Theme Darker",
   "workbench.startupEditor": "newUntitledFile",
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
   "path-intellisense.extensionOnImport": true,
   "explorer.confirmDelete": false,
   "python.pythonPath": "/bin/python",
   "git.confirmSync": false,
-  "workbench.iconTheme": "material-icon-theme",
   "window.zoomLevel": -2,
   "editor.insertSpaces": false,
   "editor.tabSize": 2,
@@ -110,6 +108,7 @@
     "!pug",
     "!python",
     "!rust",
+    "!scala",
     "!scss",
     "!typescript",
     "!typescriptreact",
@@ -123,5 +122,9 @@
   "java.configuration.checkProjectSettingsExclusions": false,
   "cSpell.language": "en",
   "java.semanticHighlighting.enabled": true,
-  "julia.enableTelemetry": false
+  "julia.enableTelemetry": false,
+  "workbench.colorTheme": "Material Theme Darker",
+  "workbench.iconTheme": "material-icon-theme",
+  "dart.warnWhenEditingFilesOutsideWorkspace": false,
+  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer"
 }

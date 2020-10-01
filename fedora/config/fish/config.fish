@@ -21,6 +21,7 @@ function fish_user_key_bindings
  	bind \b backward-kill-path-component
 	bind \e\[3\;5~ kill-word
 	bind \ed __fd
+	bind \eq cmatrix\ -s
 end	
 
 if status --is-interactive
@@ -70,7 +71,11 @@ if status --is-interactive
 	end
 end
 
-set fish_user_paths "$HOME/flutter/bin" "$HOME/.local/bin" "$HOME/.npm-global/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
+set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$HOME/.yarn/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
+
+set -Ux EDITOR nvim
+set -Ux VISUAL code
+set -Ux JULIA_NUM_THREADS (nproc)
 
 
 # scriptlets
@@ -100,21 +105,22 @@ function backup --description "backups all files to ~/backup"
 
 	# relative to ~/
 	set to_backup \
-	wayback \
-	coding \
-	Music \
-	Documents \
-	games \
-	Pictures
+		wayback \
+		coding \
+		Music \
+		Documents \
+		games \
+		Pictures
 
 	set excluded \
-	node_modules \
-	.git \
-	target
+		node_modules \
+		.git \
+		target \
+		rose
 	
 	for dir in $to_backup
 		rsync -avr '--exclude=*/'$excluded'*' ~/$dir ~/backup/raw 1> /dev/null
-		7z a ~/backup/$dir.zip ~/$dir/* -xr!$excluded
+		7z a ~/backup/$dir.7z ~/$dir/* -xr!$excluded
 	end
 end
 
@@ -143,17 +149,12 @@ function upgrade
 		set yes true
 	end
 
-	# if not test (id -u) -eq 0
-	# 	echo 'You need sudo for this command'
-	# 	return 1
-	# end
 	if $yes
 		sudo dnf upgrade -y
 		flatpak update -y
 		yarn global upgrade --latest
 	else
-		sudo dnf upgrade
-		flatpak update
+		yay
 		yarn global upgrade-interactive --latest
 	end
 
@@ -179,11 +180,9 @@ function compress-vid
 	ffmpeg -i $argv[1] $input[1]-compressed.$input[2]
 end
 
-function lang-versions
-	printf 'node ' && node -v
-	go version
-	cargo version
-	python --version
+function update-mirrors
+	sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+	sudo reflector -f 12 -l 10 -n 12 --sort rate --save /etc/pacman.d/mirrorlist
 end
 
 zoxide init fish | source

@@ -1,4 +1,53 @@
 [character]
-	symbol = "➜"
+success_symbol = "[➜](bold green)"
+error_symbol = "[➜](bold red)"
+
 [directory]
-	truncation_length = 8 
+truncation_length = 8
+
+[battery]
+full_symbol = ""
+charging_symbol = "⚡"
+discharging_symbol = " "
+
+[aws]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[java]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
