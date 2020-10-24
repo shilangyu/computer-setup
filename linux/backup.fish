@@ -29,3 +29,6 @@ set config_cleanup \
 for dir in $config_cleanup
 	rm config/$dir -r
 end
+
+# gnome config 
+dconf dump / > gnome-config.ini

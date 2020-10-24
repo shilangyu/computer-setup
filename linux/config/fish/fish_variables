@@ -1,9 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR --export EDITOR:nvim
 SETUVAR JAVA_HOME:/usr/lib/jvm/java\x2d13\x2dopenjdk\x2d13\x2e0\x2e2\x2e8\x2d1\x2erolling\x2efc31\x2ex86_64
-SETUVAR --export JULIA_NUM_THREADS:4
-SETUVAR --export VISUAL:code
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d

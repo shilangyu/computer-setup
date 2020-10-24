@@ -22,6 +22,7 @@ function fish_user_key_bindings
 	bind \e\[3\;5~ kill-word
 	bind \ed __fd
 	bind \eq cmatrix\ -s
+	bind \eb tmux\ new-window\ btm
 end	
 
 if status --is-interactive
@@ -73,9 +74,9 @@ end
 
 set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$HOME/.yarn/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
 
-set -Ux EDITOR nvim
-set -Ux VISUAL code
-set -Ux JULIA_NUM_THREADS (nproc)
+set -x EDITOR nvim
+set -x VISUAL code
+set -x JULIA_NUM_THREADS (nproc)
 
 
 # scriptlets
@@ -178,6 +179,12 @@ end
 function compress-vid
 	set input (file-parts $argv[1])
 	ffmpeg -i $argv[1] $input[1]-compressed.$input[2]
+end
+
+function imgs-to-pdf --description "this works in place, will compress imgs"
+	mogrify -auto-orient -strip -interlace Plane -gaussian-blur 0.05 -quality 85% $argv
+
+	convert $argv out.pdf
 end
 
 function update-mirrors

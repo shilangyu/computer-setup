@@ -126,5 +126,6 @@
   "workbench.colorTheme": "Material Theme Darker",
   "workbench.iconTheme": "material-icon-theme",
   "dart.warnWhenEditingFilesOutsideWorkspace": false,
-  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer"
+  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
+  "C_Cpp.default.cppStandard": "c++20"
 }
