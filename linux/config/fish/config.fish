@@ -1,7 +1,3 @@
-function fish_right_prompt
-    # intentionally left blank
-end
-
 function fish_greeting
     # intentionally left blank
 end
@@ -33,10 +29,8 @@ if status --is-interactive
     abbr -g gcl 'git clone ssh://git@github.com/'
     abbr -g gs 'git status'
     abbr -g gc 'git commit -m'
-    abbr -g gl 'git log'
-    abbr -g gct 'git ls-files | grep -Ev "yarn.lock" | xargs wc -l'
-
-    abbr -g dnf 'dnf -C'
+    abbr -g gch 'git checkout'
+    abbr -g gl 'git log --graph'
 
     abbr -g c 'code .'
 
@@ -44,10 +38,11 @@ if status --is-interactive
     abbr -g gcb 'xclip -o'
     abbr -g fcb 'xclip -selection clipboard -t image/png -o >'
 
-    abbr -g nau 'nautilus .'
+    abbr -g nau 'nautilus . &; disown'
 
-    abbr -g ls 'ls -a'
-    abbr -g o 'open'
+    abbr -g ls 'ls -A'
+    abbr -g la 'ls -lAh'
+    abbr -g o open
     abbr -g exe 'chmod +x'
     abbr -g mkdir 'mkdir -p'
 
@@ -55,15 +50,18 @@ if status --is-interactive
 
     abbr -g dua 'dua -f binary'
 
-    abbr -g dl 'youtube-dl -f="bestvideo[height<1601]+bestaudio"'
+    abbr -g dl youtube-dl
 
     abbr -g rsync 'rsync -Ph'
+
+    abbr -g tokei 'tokei --num-format underscores'
+
+    abbr -g croc 'croc --yes'
 
     # aliases
     alias ls lsd
     alias vim nvim
     alias cat bat
-    alias grep rg
 
     # starting directory
     cd ~/coding
@@ -130,10 +128,6 @@ function backup --description "backups all files to ~/backup"
     end
 end
 
-function ipv4 --description "returns your private ip"
-    echo (hostname -I | awk '{print $1}')
-end
-
 function serveo --description "exposes local network"
     while true
         ssh -R $argv[1]":80:"(ipv4)":"$argv[2] serveo.net
@@ -141,40 +135,14 @@ function serveo --description "exposes local network"
     end
 end
 
-function ts_node
-    set dir temp(random)
-    if tsc --outDir $dir
-        node $dir/$argv[1]
-    end
-    rm -rf $dir
-end
 
-function upgrade
-    set yes false
-    if test $argv[1] = '-y' 2>/dev/null
-        set yes true
-    end
+function upgrade --description "Full system upgrade. Linux package manager as well as language specific package managers."
+    date -Iseconds >>~/.upgrade-timestamps.txt
 
-    if $yes
-        sudo dnf upgrade -y
-        flatpak update -y
-        yarn global upgrade --latest
-    else
-        yay
-        yarn global upgrade-interactive --latest
-    end
-
-    cargo install --list | grep ' v\\d.+:' -r '' | xargs cargo install
+    yay
+    yarn global upgrade-interactive --latest
+    cargo install --list | rg ' v\\d.+:' -r '' | xargs cargo install
     rustup update
-end
-
-function fix-touchpad
-    sudo rmmod rmi_smbus
-    sudo modprobe rmi_smbus
-end
-
-function yarn-restart
-    rm -rf node_modules && yarn
 end
 
 function file-parts
@@ -184,6 +152,11 @@ end
 function compress-vid
     set input (file-parts $argv[1])
     ffmpeg -i $argv[1] $input[1]-compressed.$input[2]
+end
+
+function compress-pdf
+    set input (file-parts $argv[1])
+    gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$input[1]-compressed.pdf $input[1].pdf
 end
 
 function imgs-to-pdf --description "this works in place, will compress imgs"
@@ -196,6 +169,7 @@ function update-mirrors
     sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
     sudo reflector -f 12 -l 10 -n 12 --sort rate --save /etc/pacman.d/mirrorlist
 end
+
 
 zoxide init fish | source
 starship init fish | source

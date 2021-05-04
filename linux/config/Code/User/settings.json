@@ -5,7 +5,6 @@
   "explorer.confirmDelete": false,
   "python.pythonPath": "/bin/python",
   "git.confirmSync": false,
-  "window.zoomLevel": -2,
   "editor.insertSpaces": false,
   "editor.tabSize": 2,
   "editor.cursorBlinking": "expand",
@@ -68,7 +67,6 @@
   },
   "editor.renderWhitespace": "selection",
   "editor.cursorSurroundingLines": 10,
-  "editor.formatOnPaste": true,
   "editor.formatOnType": false,
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -80,7 +78,6 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "window.menuBarVisibility": "toggle",
-  "C_Cpp.clang_format_path": "/usr/bin/clang-format",
   "editor.fontLigatures": "'ss01', 'ss02', 'ss04', 'ss06', 'zero'",
   "search.exclude": {
     "**/node_modules": true,
@@ -89,7 +86,6 @@
     "**/yarn.lock": true
   },
   "diffEditor.ignoreTrimWhitespace": false,
-  "C_Cpp.clang_format_style": "Chromium",
   "cSpell.enableFiletypes": [
     "!asciidoc",
     "!c",
@@ -116,16 +112,34 @@
     "toml"
   ],
   "workbench.preferredDarkColorTheme": "Material Theme Darker",
-  "workbench.preferredLightColorTheme": "Dracula.min Light",
-  "editor.renameOnType": true,
+  "workbench.preferredLightColorTheme": "Solarized Light",
+  "editor.linkedEditing": true,
   "extensions.ignoreRecommendations": false,
-  "java.configuration.checkProjectSettingsExclusions": false,
   "cSpell.language": "en",
-  "java.semanticHighlighting.enabled": true,
   "julia.enableTelemetry": false,
-  "workbench.colorTheme": "Material Theme Darker",
+  "workbench.colorTheme": "Solarized Light",
   "workbench.iconTheme": "material-icon-theme",
   "dart.warnWhenEditingFilesOutsideWorkspace": false,
-  "rust-analyzer.serverPath": "/usr/bin/rust-analyzer",
-  "C_Cpp.default.cppStandard": "c++20"
+  "C_Cpp.default.cppStandard": "c++20",
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
+  "deno.enable": true,
+  "C_Cpp.clang_format_fallbackStyle": "Chromium",
+  "dart.previewLsp": true,
+  "zigLanguageClient.path": "/usr/bin/zls",
+  "[zig]": {
+    "editor.defaultFormatter": "tiehuis.zig"
+  },
+  "liveshare.authenticationProvider": "GitHub",
+  "dart.updateImportsOnRename": true,
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "workbench.productIconTheme": "fluent-icons",
+  "dart.runPubGetOnPubspecChanges": false,
+  "window.zoomLevel": -2
 }

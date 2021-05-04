@@ -1,6 +1,7 @@
 call plug#begin('~/local/share/nvim/plugged')
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 let g:rustfmt_autosave = 1
