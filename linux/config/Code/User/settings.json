@@ -117,14 +117,13 @@
   "extensions.ignoreRecommendations": false,
   "cSpell.language": "en",
   "julia.enableTelemetry": false,
-  "workbench.colorTheme": "Solarized Light",
+  "workbench.colorTheme": "Material Theme Darker",
   "workbench.iconTheme": "material-icon-theme",
   "dart.warnWhenEditingFilesOutsideWorkspace": false,
   "C_Cpp.default.cppStandard": "c++20",
   "terminal.integrated.commandsToSkipShell": [
     "language-julia.interrupt"
   ],
-  "deno.enable": true,
   "C_Cpp.clang_format_fallbackStyle": "Chromium",
   "dart.previewLsp": true,
   "zigLanguageClient.path": "/usr/bin/zls",
@@ -133,13 +132,15 @@
   },
   "liveshare.authenticationProvider": "GitHub",
   "dart.updateImportsOnRename": true,
-  "workbench.editorAssociations": [
-    {
-      "viewType": "jupyter.notebook.ipynb",
-      "filenamePattern": "*.ipynb"
-    }
-  ],
+  "workbench.editorAssociations": {
+    "*.ipynb": "jupyter.notebook.ipynb"
+  },
   "workbench.productIconTheme": "fluent-icons",
   "dart.runPubGetOnPubspecChanges": false,
-  "window.zoomLevel": -2
+  "window.zoomLevel": -2,
+  "sql-formatter.uppercase": true,
+  "csharp.referencesCodeLens.enabled": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
 }

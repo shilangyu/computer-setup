@@ -13,6 +13,7 @@ set config_backup \
     bottom/ \
     nvim/ \
     mpv/ \
+    kmonad/
 
 cp ~/.config/$config_backup . -r --parents
 

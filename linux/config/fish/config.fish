@@ -17,10 +17,16 @@ function fish_user_key_bindings
     bind \b backward-kill-path-component
     bind \e\[3\;5~ kill-word
     bind \ed __fd
-    bind \eq cmatrix\ -s
-    bind \eb tmux\ new-window\ btm
+    bind \eq 'cmatrix -s'
+    bind \eb 'tmux new-window btm'
 end
 
+set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$HOME/.yarn/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
+
+set -x TERM tmux-256color
+set -x EDITOR nvim
+set -x VISUAL code
+set -x JULIA_NUM_THREADS (nproc)
 
 if status --is-interactive
     # abbreviations
@@ -45,6 +51,7 @@ if status --is-interactive
     abbr -g o open
     abbr -g exe 'chmod +x'
     abbr -g mkdir 'mkdir -p'
+    abbr -g mv 'mv -i'
 
     abbr -g tb 'nc termbin.com 9999 | xclip -sel clip'
 
@@ -73,13 +80,6 @@ if status --is-interactive
         exec tmux
     end
 end
-
-set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$HOME/.yarn/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
-
-set -x EDITOR nvim
-set -x VISUAL code
-set -x TERM alacritty
-set -x JULIA_NUM_THREADS (nproc)
 
 
 # scriptlets
