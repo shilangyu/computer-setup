@@ -4,6 +4,7 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'dag/vim-fish'
+    Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
 set termguicolors
