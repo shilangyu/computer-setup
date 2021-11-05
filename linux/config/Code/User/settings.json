@@ -65,6 +65,12 @@
   "editor.codeActionsOnSave": {
     "source.organizeImports": true
   },
+  "[dart]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true,
+      "source.fixAll": true
+    }
+  },
   "editor.renderWhitespace": "selection",
   "editor.cursorSurroundingLines": 10,
   "editor.formatOnType": false,
@@ -115,15 +121,13 @@
   "workbench.preferredLightColorTheme": "Solarized Light",
   "editor.linkedEditing": true,
   "extensions.ignoreRecommendations": false,
-  "cSpell.language": "en",
+  "cSpell.language": "fr,en",
   "julia.enableTelemetry": false,
   "workbench.colorTheme": "Material Theme Darker",
   "workbench.iconTheme": "material-icon-theme",
   "dart.warnWhenEditingFilesOutsideWorkspace": false,
   "C_Cpp.default.cppStandard": "c++20",
-  "terminal.integrated.commandsToSkipShell": [
-    "language-julia.interrupt"
-  ],
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
   "C_Cpp.clang_format_fallbackStyle": "Chromium",
   "dart.previewLsp": true,
   "zigLanguageClient.path": "/usr/bin/zls",
@@ -143,4 +147,25 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "python.defaultInterpreterPath": "/bin/python",
+  "security.workspace.trust.untrustedFiles": "open",
+  "julia.symbolCacheDownload": true,
+  "editor.bracketPairColorization.enabled": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.tools": [
+    {
+      "name": "latexmk",
+      "command": "latexmk",
+      "args": [
+        "-shell-escape",
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-pdf",
+        "-outdir=%OUTDIR%",
+        "%DOC%"
+      ],
+      "env": {}
+    }
+  ]
 }

@@ -21,7 +21,7 @@ function fish_user_key_bindings
     bind \eb 'tmux new-window btm'
 end
 
-set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$HOME/.yarn/bin" "$HOME/go/bin" "$HOME/.cargo/bin" $fish_user_paths
+set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$HOME/.yarn/bin" "$HOME/go/bin" "$HOME/.cargo/bin" "$HOME/fvm/default/bin" $fish_user_paths
 
 set -x TERM tmux-256color
 set -x EDITOR nvim
@@ -111,7 +111,6 @@ function backup --description "backups all files to ~/backup"
     set to_backup \
         wayback \
         coding \
-        Music \
         Documents \
         games \
         Pictures
