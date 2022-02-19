@@ -70,9 +70,6 @@ if status --is-interactive
     alias vim nvim
     alias cat bat
 
-    # starting directory
-    cd ~/coding
-
     # run tmux
     if not set -q TMUX
         # for some weird reason the config is reset on every startup? I need to load it manually each time

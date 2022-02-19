@@ -18,6 +18,7 @@ set number relativenumber
 set tabstop=4
 set shiftwidth=4
 set expandtab
+set linebreak
 
 set undodir=~/.cache/nvim/.undofile
 set undofile
