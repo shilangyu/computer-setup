@@ -36,7 +36,7 @@ if status --is-interactive
     abbr -g gs 'git status'
     abbr -g gc 'git commit -m'
     abbr -g gch 'git checkout'
-    abbr -g gl 'git log --graph'
+    abbr -g gl 'git log --decorate --graph --oneline'
 
     abbr -g c 'code .'
 

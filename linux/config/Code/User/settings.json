@@ -167,5 +167,7 @@
       ],
       "env": {}
     }
-  ]
+  ],
+  "dart.showTodos": false,
+  "git.autoRepositoryDetection": false
 }

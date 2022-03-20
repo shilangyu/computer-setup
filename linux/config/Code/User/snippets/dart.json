@@ -12,25 +12,59 @@
   // 	],
   // 	"description": "Log output to console"
   // }
-  "If not null": {
-    "prefix": "inn",
+  "cubit": {
+    "prefix": "cubit",
     "body": [
-      "if ($1 != null) '${1/([a-z]*)(([A-Z])+([a-z]+))?/${1:/downcase}${2:+_}${3:/downcase}${4:/downcase}/g}': $1$0,"
+      "import 'package:flutter_bloc/flutter_bloc.dart';",
+      "",
+      "class $0Cubit extends Cubit<$0State> {",
+      "\t$0Cubit() : super(const $0State());",
+      "",
+      "}",
+      "",
+      "abstract class $0State {",
+      "\tconst $0State();",
+      "}"
     ]
   },
-  "Serializable model": {
-    "prefix": "model",
+  "cubitbuilder": {
+    "prefix": "cubitbuilder",
     "body": [
-      "@freezed",
-      "abstract class $1 implements _$$1 {",
-      "  @JsonSerializable(fieldRename: FieldRename.snake)",
-      "  factory $1({",
-      "    $0",
-      "  }) = _$1;",
+      "BlocBuilder<$1Cubit, $1State>(",
+      "\tbuilder: (context, state) {$0}",
+      "),"
+    ]
+  },
+  "sizedbox": {
+    "prefix": "sizedbox",
+    "body": ["const SizedBox($1)$0"]
+  },
+  "theme": {
+    "prefix": "theme",
+    "body": ["final theme = Theme.of(context);"]
+  },
+  "sleep": {
+    "prefix": "sleep",
+    "body": [
+      "await Future<dynamic>.delayed(const Duration(milliseconds: ${1:1000}));$0"
+    ]
+  },
+  "repeat widget": {
+    "prefix": "repeat",
+    "body": ["for(var i = 0; i < $1; i++)$0"]
+  },
+  "freezed model": {
+    "prefix": "fmodel",
+    "body": [
+      "import 'package:freezed_annotation/freezed_annotation.dart';",
+      "part '$TM_FILENAME_BASE.freezed.dart';",
       "",
-      "  $1._();",
-      "  factory $1.fromJson(Map<String, dynamic> json) =>",
-      "      _$$1FromJson(json);",
+      "@freezed",
+      "\tclass ${1:name}State with _$$1State {",
+      "\tconst factory $1State({",
+      "\t\t$0",
+      "\t}) = _$1State;",
+      "\tconst $1State._();",
       "}"
     ]
   }
