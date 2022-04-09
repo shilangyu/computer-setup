@@ -13,6 +13,8 @@ set config_backup \
     bottom/ \
     nvim/ \
     mpv/ \
+    lsd/ \
+    bat/ \
     kmonad/
 
 cp ~/.config/$config_backup . -r --parents
