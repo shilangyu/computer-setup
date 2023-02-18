@@ -4,6 +4,7 @@ call plug#begin()
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'dracula/vim', { 'as': 'dracula' }
     Plug 'dag/vim-fish'
+    Plug 'airblade/vim-gitgutter'
     Plug 'JuliaEditorSupport/julia-vim'
 call plug#end()
 
@@ -19,6 +20,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set linebreak
+set mouse=a
 
 set undodir=~/.cache/nvim/.undofile
 set undofile

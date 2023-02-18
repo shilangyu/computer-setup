@@ -44,8 +44,6 @@ if status --is-interactive
     abbr -g gcb 'xclip -o'
     abbr -g fcb 'xclip -selection clipboard -t image/png -o >'
 
-    abbr -g nau 'nautilus . &; disown'
-
     abbr -g ls 'ls -A'
     abbr -g la 'ls -lAh'
     abbr -g o open
@@ -56,8 +54,10 @@ if status --is-interactive
     abbr -g tb 'nc termbin.com 9999 | xclip -sel clip'
 
     abbr -g dua 'dua -f binary'
+    
+    abbr -g fd 'fd -HI'
 
-    abbr -g dl youtube-dl
+    abbr -g dl yt-dlp
 
     abbr -g rsync 'rsync -Ph'
 
@@ -136,8 +136,8 @@ function upgrade --description "Full system upgrade. Linux package manager as we
     date -Iseconds >>~/.upgrade-timestamps.txt
 
     yay
-    cargo install --list | rg ' v\\d.+:' -r '' | xargs cargo install
     rustup update
+    cargo install --list | rg ' v\\d.+:' -r '' | xargs cargo install
 end
 
 function file-parts

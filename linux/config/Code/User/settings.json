@@ -3,7 +3,6 @@
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "path-intellisense.extensionOnImport": true,
   "explorer.confirmDelete": false,
-  "python.pythonPath": "/bin/python",
   "git.confirmSync": false,
   "editor.insertSpaces": false,
   "editor.tabSize": 2,
@@ -27,12 +26,11 @@
     "**/node_modules": true
   },
   "git.autofetch": true,
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.smoothScrolling": true,
   "explorer.confirmDragAndDrop": false,
   "workbench.settings.useSplitJSON": true,
   "editor.formatOnSave": true,
-  "liveshare.featureSet": "insiders",
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -59,7 +57,8 @@
   },
   "[python]": {
     "editor.tabSize": 4,
-    "editor.insertSpaces": true
+    "editor.insertSpaces": true,
+    "editor.defaultFormatter": "ms-python.python"
   },
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.codeActionsOnSave": {
@@ -84,13 +83,14 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "window.menuBarVisibility": "toggle",
-  "editor.fontLigatures": "'ss01', 'ss02', 'ss04', 'ss06', 'zero'",
+  "editor.fontLigatures": true,
   "search.exclude": {
     "**/node_modules": true,
     "**/bower_components": true,
     "**/*.code-search": true,
     "**/yarn.lock": true
   },
+  "editor.formatOnPaste": false,
   "diffEditor.ignoreTrimWhitespace": false,
   "cSpell.enableFiletypes": [
     "!asciidoc",
@@ -98,6 +98,7 @@
     "!cpp",
     "!csharp",
     "!css",
+    "!dart",
     "!git-commit",
     "!go",
     "!handlebars",
@@ -117,20 +118,19 @@
     "csv",
     "toml"
   ],
-  "workbench.preferredDarkColorTheme": "Material Theme Darker",
-  "workbench.preferredLightColorTheme": "Solarized Light",
+  "workbench.preferredDarkColorTheme": "Dracula.min",
+  "workbench.preferredLightColorTheme": "Dracula.min Light",
   "editor.linkedEditing": true,
   "extensions.ignoreRecommendations": false,
   "cSpell.language": "fr,en",
   "julia.enableTelemetry": false,
-  "workbench.colorTheme": "Material Theme Darker",
+  "window.autoDetectColorScheme": true,
+  "workbench.colorTheme": "Dracula.min",
   "workbench.iconTheme": "material-icon-theme",
   "dart.warnWhenEditingFilesOutsideWorkspace": false,
   "C_Cpp.default.cppStandard": "c++20",
   "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
   "C_Cpp.clang_format_fallbackStyle": "Chromium",
-  "dart.previewLsp": true,
-  "zigLanguageClient.path": "/usr/bin/zls",
   "[zig]": {
     "editor.defaultFormatter": "tiehuis.zig"
   },
@@ -141,13 +141,11 @@
   },
   "workbench.productIconTheme": "fluent-icons",
   "dart.runPubGetOnPubspecChanges": false,
-  "window.zoomLevel": -2,
   "sql-formatter.uppercase": true,
   "csharp.referencesCodeLens.enabled": false,
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "python.defaultInterpreterPath": "/bin/python",
   "security.workspace.trust.untrustedFiles": "open",
   "julia.symbolCacheDownload": true,
   "editor.bracketPairColorization.enabled": true,
@@ -168,6 +166,30 @@
       "env": {}
     }
   ],
-  "dart.showTodos": false,
-  "git.autoRepositoryDetection": false
+  "redhat.telemetry.enabled": false,
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": true,
+  "omnisharp.enableRoslynAnalyzers": true,
+  "omnisharp.enableEditorConfigSupport": true,
+  "debug.onTaskErrors": "abort",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.dart": "$(capture).g.dart,$(capture).freezed.dart"
+  },
+  "git.autoRepositoryDetection": false,
+  "rust-analyzer.inlayHints.closingBraceHints.enable": false,
+  "rust-analyzer.inlayHints.parameterHints.enable": false,
+  "mergeEditor.diffAlgorithm": "experimental",
+  "editor.stickyScroll.enabled": true,
+  "rust-analyzer.inlayHints.lifetimeElisionHints.enable": "skip_trivial",
+  "[julia]": {
+    "editor.unicodeHighlight.ambiguousCharacters": false
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "rust-analyzer.check.command": "clippy",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+  "git.openRepositoryInParentFolders": "always"
 }

@@ -20,10 +20,6 @@
       "class $0Cubit extends Cubit<$0State> {",
       "\t$0Cubit() : super(const $0State());",
       "",
-      "}",
-      "",
-      "abstract class $0State {",
-      "\tconst $0State();",
       "}"
     ]
   },
