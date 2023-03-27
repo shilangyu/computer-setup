@@ -21,7 +21,29 @@ function fish_user_key_bindings
     bind \eb 'tmux new-window btm'
 end
 
-set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$HOME/go/bin" "$HOME/.cargo/bin" "$HOME/fvm/default/bin" $fish_user_paths
+set -x XDG_DATA_HOME $HOME/.local/share
+set -x XDG_CONFIG_HOME $HOME/.config
+set -x XDG_STATE_HOME $HOME/.local/state
+set -x XDG_CACHE_HOME $HOME/.cache
+
+# fix rude apps adding stuff to my $HOME
+set -x ANDROID_HOME $XDG_DATA_HOME/android
+set -x CARGO_HOME $XDG_DATA_HOME/cargo
+set -x RUSTUP_HOME $XDG_DATA_HOME/rustup
+set -x JUPYTER_CONFIG_DIR $XDG_CONFIG_HOME/jupyter
+set -x GEM_HOME $XDG_DATA_HOME/gem
+set -x BUNDLE_USER_CONFIG $XDG_CONFIG_HOME/bundle
+set -x BUNDLE_USER_CACHE $XDG_CACHE_HOME/bundle
+set -x BUNDLE_USER_PLUGIN $XDG_DATA_HOME/bundle
+set -x NUGET_PACKAGES $XDG_CACHE_HOME/NuGetPackages
+set -x OPAMROOT $XDG_DATA_HOME/opam
+set -x GRADLE_USER_HOME $XDG_DATA_HOME/gradle
+set -x GOPATH $XDG_DATA_HOME/go
+set -x DOCKER_CONFIG $XDG_CONFIG_HOME/docker
+set -x JULIA_DEPOT_PATH $XDG_DATA_HOME/julia ""$JULIA_DEPOT_PATH
+set -x IPYTHONDIR $XDG_CONFIG_HOME/ipython
+
+set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$GOPATH/bin" "$CARGO_HOME/bin" "$HOME/fvm/default/bin" $fish_user_paths
 
 set -x TERM tmux-256color
 set -x EDITOR nvim
@@ -54,7 +76,7 @@ if status --is-interactive
     abbr -g tb 'nc termbin.com 9999 | xclip -sel clip'
 
     abbr -g dua 'dua -f binary'
-    
+
     abbr -g fd 'fd -HI'
 
     abbr -g dl yt-dlp
