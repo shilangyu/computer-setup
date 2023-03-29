@@ -49,14 +49,16 @@ set -x TERM tmux-256color
 set -x EDITOR nvim
 set -x VISUAL code
 set -x JULIA_NUM_THREADS (nproc)
+set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
+set -x PIPENV_DONT_LOAD_ENV 1
 
 if status --is-interactive
     # abbreviations
     abbr -g gp 'git push'
     abbr -g gpl 'git pull'
-    abbr -g gcl 'git clone ssh://git@github.com/'
+    abbr -g gcl --set-cursor 'git clone ssh://git@github.com/%'
     abbr -g gs 'git status'
-    abbr -g gc 'git commit -m'
+    abbr -g gc --set-cursor 'git commit -m "%"'
     abbr -g gch 'git checkout'
     abbr -g gl 'git log --decorate --graph --oneline'
 
