@@ -20,6 +20,10 @@
       "class $0Cubit extends Cubit<$0State> {",
       "\t$0Cubit() : super(const $0State());",
       "",
+      "}",
+      "",
+      "abstract class $0State {",
+      "\tconst $0State();",
       "}"
     ]
   },
@@ -56,11 +60,11 @@
       "part '$TM_FILENAME_BASE.freezed.dart';",
       "",
       "@freezed",
-      "\tclass ${1:name}State with _$$1State {",
-      "\tconst factory $1State({",
+      "\tclass ${1:name} with _$$1 {",
+      "\tconst factory $1({",
       "\t\t$0",
-      "\t}) = _$1State;",
-      "\tconst $1State._();",
+      "\t}) = _$1;",
+      "\tconst $1._();",
       "}"
     ]
   }

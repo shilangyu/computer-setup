@@ -20,7 +20,8 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set linebreak
-set mouse=a
+set autoread
 
 set undodir=~/.cache/nvim/.undofile
 set undofile
+set mouse=a

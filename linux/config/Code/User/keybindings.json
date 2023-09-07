@@ -1,61 +1,69 @@
 // Place your key bindings in this file to override the defaults
 [
-	{
-		"key": "shift+alt+down",
-		"command": "editor.action.copyLinesDownAction",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "ctrl+shift+alt+down",
-		"command": "-editor.action.copyLinesDownAction",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "shift+alt+up",
-		"command": "editor.action.copyLinesUpAction",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "ctrl+shift+alt+up",
-		"command": "-editor.action.copyLinesUpAction",
-		"when": "editorTextFocus && !editorReadonly"
-	},
-	{
-		"key": "shift+alt+up",
-		"command": "-editor.action.insertCursorAbove",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "shift+alt+down",
-		"command": "-editor.action.insertCursorBelow",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+b",
-		"command": "-markdown.extension.editing.toggleBold",
-		"when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
-	},
-	{
-		"key": "ctrl+shift+alt+s",
-		"command": "git.stageSelectedRanges",
-		"when": "editorTextFocus",
-	},
-	{
-		"key": "ctrl+shift+s",
-		"command": "workbench.action.files.saveAll"
-	},
-	{
-		"key": "ctrl+shift+6",
-		"command": "editor.action.transformToUppercase",
-		"when": "editorTextFocus"
-	},
-	{
-		"key": "ctrl+t",
-		"command": "workbench.action.files.newUntitledFile"
-	},
-	{
-		"key": "ctrl+w",
-		"command": "workbench.action.closeWindow",
-		"when": "!editorIsOpen && !multipleEditorGroups"
-	}
+  {
+    "key": "shift+alt+down",
+    "command": "editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+down",
+    "command": "-editor.action.copyLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+shift+alt+up",
+    "command": "-editor.action.copyLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+alt+up",
+    "command": "-editor.action.insertCursorAbove",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+alt+down",
+    "command": "-editor.action.insertCursorBelow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "-markdown.extension.editing.toggleBold",
+    "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+  },
+  {
+    "key": "ctrl+shift+alt+s",
+    "command": "git.stageSelectedRanges",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
+    "key": "ctrl+shift+6",
+    "command": "editor.action.transformToUppercase",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeWindow",
+    "when": "!editorIsOpen && !multipleEditorGroups"
+  },
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "ctrl+shift+tab",
+    "command": "workbench.action.previousEditor"
+  }
 ]

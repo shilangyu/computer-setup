@@ -161,7 +161,7 @@ function upgrade --description "Full system upgrade. Linux package manager as we
 
     yay
     rustup update
-    cargo install --list | rg ' v\\d.+:' -r '' | xargs cargo install
+    cargo install --list | rg ' v\\d.+:' -r '' | RUSTFLAGS='-C target-cpu=native' xargs cargo install
 end
 
 function file-parts
