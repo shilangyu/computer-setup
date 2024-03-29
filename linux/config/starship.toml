@@ -6,9 +6,9 @@ error_symbol = "[➜](bold red)"
 truncation_length = 8
 
 [battery]
-full_symbol = ""
+full_symbol = "󰁹 "
 charging_symbol = "⚡"
-discharging_symbol = " "
+discharging_symbol = "󰂃 "
 
 [aws]
 symbol = " "
@@ -38,10 +38,10 @@ symbol = " "
 symbol = " "
 
 [memory_usage]
-symbol = " "
+symbol = "󰍛"
 
 [nim]
-symbol = " "
+symbol = ""
 
 [php]
 symbol = " "

@@ -81,7 +81,7 @@ if status --is-interactive
 
     abbr -g fd 'fd -HI'
 
-    abbr -g dl yt-dlp
+    abbr -g dl --set-cursor "yt-dlp '%'"
 
     abbr -g rsync 'rsync -Ph'
 
