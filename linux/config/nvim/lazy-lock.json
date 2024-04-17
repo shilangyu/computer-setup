@@ -1,15 +1,18 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "0236521ea582747b58869cb72f70ccfa967d2e89" },
   "Coqtail": { "branch": "main", "commit": "8f24d722f4b3dbf5c445d6e146bebf4c22381301" },
+  "conform.nvim": { "branch": "master", "commit": "a6965ac128eba75537ec2bc5ddd5d5e357062bdc" },
   "dracula": { "branch": "master", "commit": "9fa89296884e47bbadc49ad959e37b9d1c24cafb" },
   "julia-vim": { "branch": "master", "commit": "20542b50610e075e5f4199187800ede2425f6cb8" },
   "lazy.nvim": { "branch": "main", "commit": "7a2617575a8c990394c0f28a8e980b33b72e1b0d" },
   "lean.nvim": { "branch": "main", "commit": "1b35a32538a773a7e79cf52740f485528b3ecb8f" },
   "nvim-lspconfig": { "branch": "master", "commit": "6e5c78ebc9936ca74add66bda22c566f951b6ee5" },
+  "nvim-treesitter": { "branch": "master", "commit": "f84887230af1f7581e29ccd5d93f59d98058d565" },
   "plenary.nvim": { "branch": "master", "commit": "8aad4396840be7fc42896e3011751b7609ca4119" },
   "rust.vim": { "branch": "master", "commit": "889b9a7515db477f4cb6808bef1769e53493c578" },
   "vim-fish": { "branch": "master", "commit": "50b95cbbcd09c046121367d49039710e9dc9c15f" },
   "vim-gitgutter": { "branch": "main", "commit": "67ef116100b40f9ca128196504a2e0bc0a2753b0" },
   "vim-go": { "branch": "master", "commit": "14eedf6135cf4253b0ed48a0b53d6834a40da1c4" },
-  "vim-terraform": { "branch": "master", "commit": "21f756b933cd11ac5990a6046fdc7c4e2a6c0aee" }
+  "vim-terraform": { "branch": "master", "commit": "21f756b933cd11ac5990a6046fdc7c4e2a6c0aee" },
+  "vimtex": { "branch": "master", "commit": "ac0a41b297a70c101df89bc9c8d43341ba00fd4f" }
 }
