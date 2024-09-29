@@ -16,6 +16,7 @@ return {
 			go = { "gofmt" },
 			swift = { "swiftfmt" },
 			dart = { "dartfmt" },
+			rust = { "rustfmt" },
 		},
 		format_on_save = { timeout_ms = 500, lsp_fallback = true },
 		formatters = {

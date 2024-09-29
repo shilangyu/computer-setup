@@ -24,5 +24,8 @@ vim.cmd([[
     augroup END
 ]])
 
--- TODO: make :W and :Q remapped to :w and :q (common typo)
+-- very common typo remaping
+vim.cmd([[command! W write]])
+vim.cmd([[command! Q quit]])
+
 -- TODO: do something about sharing platform clipboard with yanking

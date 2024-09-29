@@ -132,6 +132,7 @@ function backup --description "backups all files to ~/backup"
     set to_backup \
         wayback \
         coding \
+        Music \
         Documents \
         games \
         Pictures
@@ -140,11 +141,12 @@ function backup --description "backups all files to ~/backup"
         node_modules \
         .git \
         target \
+        .dart_tool \
         rose
 
     for dir in $to_backup
         rsync -avr '--exclude=*/'$excluded'*' ~/$dir ~/backup/raw 1>/dev/null
-        7z a ~/backup/$dir.7z ~/$dir/* -xr!$excluded
+        7z a ~/backup/$dir.7z ~/$dir/{*,.*} -xr!$excluded
     end
 end
 

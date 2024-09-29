@@ -1,6 +1,7 @@
-return { {
-	"rust-lang/rust.vim",
-	config = function(_, opts)
-		vim.g.rustfmt_autosave = true
-	end,
-} }
+return {
+	{
+		"mrcjkb/rustaceanvim",
+		version = "^4", -- Recommended
+		lazy = false, -- This plugin is already lazy
+	},
+}
