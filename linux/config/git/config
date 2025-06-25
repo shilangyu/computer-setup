@@ -1,0 +1,28 @@
+[pull]
+	rebase = false
+[init]
+    defaultBranch = main
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	pager = delta
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+    navigate = true
+    side-by-side = true
+    hyperlinks = true
+    hyperlinks-file-link-format = "vscode://file/{path}:{line}"
+    syntax-theme = "Dracula"
+    file-style = "#4da6ff"
+    file-decoration-style = "#4da6ff ul"
+    hunk-header-decoration-style = "#4da6ff box"
+    hunk-header-file-style = "#4da6ff"
+    hunk-header-line-number-style = "#4da6ff"
+    minus-style = "syntax #990000"
+    line-numbers-minus-style = "#990000"
+[merge]
+	conflictStyle = zdiff3

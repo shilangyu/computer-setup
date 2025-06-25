@@ -14,8 +14,10 @@ set config_backup \
     nvim/ \
     mpv/ \
     lsd/ \
-    bat/ \
     kmonad/
+    git/ \
+    lazygit/ \
+    bat/
 
 cp ~/.config/$config_backup . -r --parents
 
