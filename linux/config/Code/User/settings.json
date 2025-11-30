@@ -30,7 +30,7 @@
     "**/.factorypath": true
   },
   "git.autofetch": true,
-  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorSmoothCaretAnimation": true,
   "editor.smoothScrolling": true,
   "explorer.confirmDragAndDrop": false,
   "workbench.settings.useSplitJSON": true,

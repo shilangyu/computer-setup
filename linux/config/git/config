@@ -9,6 +9,7 @@
 	required = true
 [core]
 	pager = delta
+	editor = nvim
 [interactive]
 	diffFilter = delta --color-only
 [delta]
@@ -23,6 +24,10 @@
     hunk-header-file-style = "#4da6ff"
     hunk-header-line-number-style = "#4da6ff"
     minus-style = "syntax #990000"
-    line-numbers-minus-style = "#990000"
+    line-numbers-minus-style = "red"
+    line-numbers-plus-style = "green"
+    line-numbers-left-style = "#4da6ff"
+    line-numbers-right-style = "#4da6ff"
+    line-numbers-zero-style = "#8c8c8c"
 [merge]
 	conflictStyle = zdiff3

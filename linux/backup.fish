@@ -32,7 +32,7 @@ set config_cleanup \
     Code/User/workspaceStorage/ \
     mpv/watch_later
 
-rm config/$config_cleanup -r
+rm -r config/$config_cleanup
 
 # gnome config 
 dconf dump / >gnome-config.ini

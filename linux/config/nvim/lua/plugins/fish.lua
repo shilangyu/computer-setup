@@ -1,1 +1,0 @@
-return { "dag/vim-fish" }

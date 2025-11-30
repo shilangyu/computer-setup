@@ -42,6 +42,7 @@ set -x GOPATH $XDG_DATA_HOME/go
 set -x DOCKER_CONFIG $XDG_CONFIG_HOME/docker
 set -x JULIA_DEPOT_PATH $XDG_DATA_HOME/julia ""$JULIA_DEPOT_PATH
 set -x IPYTHONDIR $XDG_CONFIG_HOME/ipython
+set -x PUB_CACHE $XDG_CACHE_HOME/pub-cache
 
 set fish_user_paths "$HOME/.pub-cache/bin" "$HOME/.local/bin" "$GOPATH/bin" "$CARGO_HOME/bin" "$HOME/fvm/default/bin" $fish_user_paths
 
@@ -80,6 +81,8 @@ if status --is-interactive
     abbr -g dua 'dua -f binary'
 
     abbr -g fd 'fd -HI'
+
+    abbr -g rg --set-cursor "rg --json % | delta"
 
     abbr -g dl --set-cursor "yt-dlp '%'"
 
@@ -178,6 +181,10 @@ end
 function compress-pdf
     set input (file-parts $argv[1])
     gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/prepress -dNOPAUSE -dQUIET -dBATCH -sOutputFile=$input[1]-compressed.pdf $input[1].pdf
+end
+
+function vid-length
+    mediainfo --Inform="Video;%Duration/String3%" $argv[1]
 end
 
 function imgs-to-pdf --description "this works in place, will compress imgs"
