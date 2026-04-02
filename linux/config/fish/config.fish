@@ -82,7 +82,7 @@ if status --is-interactive
 
     abbr -g fd 'fd -HI'
 
-    abbr -g rg --set-cursor "rg --json % | delta"
+    abbr -g rg --set-cursor "rg --json -i % | delta"
 
     abbr -g dl --set-cursor "yt-dlp '%'"
 
@@ -96,15 +96,7 @@ if status --is-interactive
     alias ls lsd
     alias vim nvim
     alias cat bat
-
-    # run tmux
-    if not set -q TMUX
-        # for some weird reason the config is reset on every startup? I need to load it manually each time
-        tmux source-file ~/.config/tmux/tmux.conf
-        exec tmux
-    end
 end
-
 
 # scriptlets
 function read_confirm --description "asks for [y/n]"
@@ -145,6 +137,8 @@ function backup --description "backups all files to ~/backup"
         .git \
         target \
         .dart_tool \
+        _opam \
+        _build \
         rose
 
     for dir in $to_backup
@@ -160,13 +154,12 @@ function serveo --description "exposes local network"
     end
 end
 
-
 function upgrade --description "Full system upgrade. Linux package manager as well as language specific package managers."
     date -Iseconds >>~/.upgrade-timestamps.txt
 
     yay
     rustup update
-    cargo install --list | rg ' v\\d.+:' -r '' | RUSTFLAGS='-C target-cpu=native' xargs cargo install
+    cargo install --list | rg ' v\\d.+:' -r '' | RUSTFLAGS='-C target-cpu=native' xargs cargo install --locked
 end
 
 function file-parts

@@ -1,19 +1,22 @@
 -- TODO:
--- - there is no autoindenting. If i write `fn asd() {\n` the cursor is on the start of the line. This should be set up using tree-sitter semantic information
--- - setup LSPs
--- - setup code completion
+-- - there is no autoindenting. If i write `fn asd() {\n` the cursor is on the start of the line. This should be set up using tree-sitter semantic information. This seems to be a bug, it is enabled in the tree sitter config
+-- - setup LSP
+--   - completions (blink.cmp?)
+--   - keybinds
+-- - setup file tree
 -- - setup LLM completion
 -- - lualine is used, yet the status bar is still there showing duplicate info
 -- - pairing of { " ' ( etc stopped working?
 -- - extend selection according to structural information from treesitter
 -- - use LSP formatting instead of custom formatters?
 -- - use LSP commenting instead of custom plugin? Or in the least this information should be provided by tree-sitter, maybe it is already so?
+-- - theme is not switching automatically (this happened after I moved the auto-theme to theme.lua)
+
 -- this needs to be setup before initializing lazy.nvim
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 require("init_lazy") -- download lazy.nvim
-
 require("lazy").setup("plugins") -- make the lua/plugins/ a module declaring plugins
 
 vim.opt.number = true -- show line numbers
@@ -68,6 +71,7 @@ vim.keymap.set("v", "<leader>sc", [[y:%s/\<<C-r><C-r>"\>/<C-r><C-r>"/gI<Left><Le
 vim.keymap.set("n", "<leader>y", '"+y', {})
 vim.keymap.set("v", "<leader>y", '"+y', {})
 vim.keymap.set("n", "<leader>Y", '"+Y', {})
+vim.keymap.set("v", "<leader>Y", '"+Y', {})
 
 -- make package names in plugins/*.lua clickable URLs
 local group = vim.api.nvim_create_augroup("LinkablePackage", { clear = true })
@@ -98,9 +102,8 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter" }, {
 				local text = vim.treesitter.get_node_text(node, opts.buf)
 				if string.match(text, "^[^/]+/[^/]+$") then
 					local row1, col1, row2, col2 = node:range()
-					local bufnr = vim.api.nvim_get_current_buf()
 					vim.api.nvim_buf_set_extmark(
-						bufnr,
+						opts.buf,
 						ns,
 						row1,
 						col1,
